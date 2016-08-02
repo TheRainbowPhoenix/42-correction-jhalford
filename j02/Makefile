@@ -24,4 +24,4 @@ ifneq ($(wildcard ex07/ft_print_combn.c),)
 endif
 
 all:
-	gcc correct_j02_by_jack.c $(exo) && ./a.out
+	gcc correct_j02_jhalford.c $(exo) && ./a.out
