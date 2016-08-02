@@ -1,11 +1,15 @@
-if [ ! -d ~/jhalford ]; then
-	git clone https://github.com/jzck/42-correct-jhalford.git ~/jhalford
+if [ ! -d ~/42-correction-jhalford ]; then
+	git clone https://github.com/jzck/42-correct-jhalford.git ~/42-correction-jhalford
 else
-	cd ~/jhalford
+	cd ~/42-correction-jhalford
 	git pull
 	cd -
 fi
 
 jhalford-corr () {
-	make -f ~/jhalford/$1/Makefile
+	cp ~/42-correction-jhalford/$1/* .
+	make
+	rm Makefile
+	rm *jhalford.c
+	rm a.out
 }
