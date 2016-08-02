@@ -1,4 +1,4 @@
-if [ ! -d ~/jhalford ]
+if [ ! -d ~/jhalford ]; then
 	git clone https://github.com/jzck/42-correct-jhalford.git ~/jhalford
 fi
 
