@@ -7,6 +7,9 @@ else
 fi
 
 jhalford-corr () {
+	cd ~/42-correction-jhalford
+	git pull
+	cd -
 	cp ~/42-correction-jhalford/$1/* .
 	make
 	rm Makefile
