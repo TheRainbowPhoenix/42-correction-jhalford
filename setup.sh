@@ -3,9 +3,9 @@ if [ ! -d ~/jhalford ]; then
 else
 	cd ~/jhalford
 	git pull
+	cd -
 fi
 
 jhalford-corr () {
-	cp ~/jhalford/$1/* .
-	make
+	make -f ~/jhalford/$1/Makefile
 }
