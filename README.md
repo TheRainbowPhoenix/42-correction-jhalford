@@ -5,7 +5,7 @@ scripts de correction pour la piscine c de 42
 
 executez la commande suivante dans votre shell
 
-`curl -L https://raw.githubusercontent.com/jzck/42-correct-jhalford/master/setup.sh > /tmp/jhalford && source /tmp/jhalford`
+`curl -L https://raw.githubusercontent.com/jzck/42-correction-jhalford/master/setup.sh > /tmp/jh && source /tmp/jh`
 
 ## Utilisation
 
