@@ -1,28 +1,14 @@
-if [ ! -d ~/42-correction-jhalford ]; then
-	git clone https://github.com/jzck/42-correct-jhalford.git ~/42-correction-jhalford
-else
-	cd ~/42-correction-jhalford
-	git pull
-	cd -
-fi
-
-jhalford-corr () {
-	if [ ! -d ~/42-correction-jhalford ]; then
-		git clone https://github.com/jzck/42-correct-jhalford.git ~/42-correction-jhalford
-	else
-		cd ~/42-correction-jhalford
-		git pull
-		cd -
-	fi
-	cp ~/42-correction-jhalford/$1/* .
-	make
-	rm Makefile
-	rm *jhalford.c
-	rm a.out
-}
+source ~/42-correction-jhalford/update-git.sh
+source ~/42-correction-jhalford/jhalford-corr-install.sh
 
 echo "\e[0;32m"
-echo "        --- Utilisation ---"
-echo "tapez la commande 'jhalford-corr j02'"
-echo "        -------------------"
-echo "\e[0m" 
+echo "             --- Utilisation ---"
+echo "placez vous dans le dosser du jour a corriger"
+echo "    tapez la commande 'jhalford-corr j02'"
+echo "   tapez Entree pour passer a l'exo suivant"
+echo "             -------------------"
+echo "\e[0;34m"
+echo "             ----- Contact -----"
+echo "         slack/intra/ldap : jhalford"
+echo "             -------------------"
+echo "\e[0m"
