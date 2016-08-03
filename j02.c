@@ -6,12 +6,18 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/03 17:49:41 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/03 19:46:10 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 #ifdef ex00
 #include "ex00/ft_print_alphabet.c"
 #endif
@@ -37,11 +43,6 @@
 #include "ex07/ft_print_combn.c"
 #endif
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 void	start_exo(int num)
 {
 	getchar();	
@@ -56,20 +57,23 @@ int		main(void)
 
 	#ifdef ex00
 	start_exo(0);
+	printf("ft_print_alphabet(): ");
+	fflush(stdout);
 	ft_print_alphabet();
-	printf(" = alphabet?\n");
 	#endif
 	
 	#ifdef ex01
 	start_exo(1);
+	printf("ft_print_reverse_alphabet(): ");
+	fflush(stdout);
 	ft_print_reverse_alphabet();
-	printf(" = reverse alphabet?\n");
 	#endif
 
 	#ifdef ex02
 	start_exo(2);
+	printf("ft_print_numbers(): ");
+	fflush(stdout);
 	ft_print_numbers();
-	printf(" = chiffres de 0 jusqu'a 9 ?\n");
 	#endif
 
 	#ifdef ex03
