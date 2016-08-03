@@ -13,8 +13,6 @@ executez la commande suivante dans votre shell
 2. executer `jhalford-corr j02` en remplacant 'j02' par le jour à corriger
 3. appuyer sur entrée pour passer à l'exercice suivant
 
-Ne fonctionne que pour le j02.
-
 ## Tester son code
 
 Ce script peut servir à tester ses exercices un par un. Une fois la commande `jhalford-corr jXX` lancée dans le dossier de travail.  
@@ -25,3 +23,10 @@ Ce script peut servir à tester ses exercices un par un. Une fois la commande `j
   - La suite de tests ne recherche pas:  
     - Les oublis de prototypages (ex: `void ft_putchar(char c)`)  
     - Les fautes de norme (utiliser la commande `norminette`)
+
+## Avancement
+
+| jour | tests prêts |
+|---   |--- |
+|  02  | 7/7 |
+|  03  | 4/9 (sauf ex01) |
