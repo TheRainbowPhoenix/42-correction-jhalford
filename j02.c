@@ -6,34 +6,34 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/02 23:29:14 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/03 14:54:45 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
-#ifdef EX_00
+#ifdef ex00
 #include "ex00/ft_print_alphabet.c"
 #endif
-#ifdef EX_01
+#ifdef ex01
 #include "ex01/ft_print_reverse_alphabet.c"
 #endif
-#ifdef EX_02
+#ifdef ex02
 #include "ex02/ft_print_numbers.c"
 #endif
-#ifdef EX_03
+#ifdef ex03
 #include "ex03/ft_is_negative.c"
 #endif
-#ifdef EX_04
+#ifdef ex04
 #include "ex04/ft_print_comb.c"
 #endif
-#ifdef EX_05
+#ifdef ex05
 #include "ex05/ft_print_comb2.c"
 #endif
-#ifdef EX_06
+#ifdef ex06
 #include "ex06/ft_putnbr.c"
 #endif
-#ifdef EX_07
+#ifdef ex07
 #include "ex07/ft_print_combn.c"
 #endif
 
@@ -53,25 +53,25 @@ int		main(void)
 	printf("correction d02 by Jack\n");
 	printf("----------------------\n");
 
-	#ifdef EX_00
+	#ifdef ex00
 	start_exo(0);
 	ft_print_alphabet();
 	printf(" = alphabet?\n");
 	#endif
 	
-	#ifdef EX_01
+	#ifdef ex01
 	start_exo(1);
 	ft_print_reverse_alphabet();
 	printf(" = reverse alphabet?\n");
 	#endif
 
-	#ifdef EX_02
+	#ifdef ex02
 	start_exo(2);
 	ft_print_numbers();
 	printf(" = chiffres de 0 jusqu'a 9 ?\n");
 	#endif
 
-	#ifdef EX_03
+	#ifdef ex03
 	start_exo(3);
 	printf("ft_is_negative(-10) = '");		
 	fflush(stdout);
@@ -87,17 +87,17 @@ int		main(void)
 	printf("' (correct is P)\n");
 	#endif
 
-	#ifdef EX_04
+	#ifdef ex04
 	start_exo(4);
 	ft_print_comb();
 	#endif
 
-	#ifdef EX_05
+	#ifdef ex05
 	start_exo(5);
 	ft_print_comb2();	
 	#endif
 
-	#ifdef EX_06
+	#ifdef ex06
 	start_exo(6);
 	printf("ft_putnbr(-10) = ");		
 	fflush(stdout);
@@ -113,7 +113,7 @@ int		main(void)
 	printf(" (correct is '10')\n");
 	#endif
 
-	#ifdef EX_07
+	#ifdef ex07
 	start_exo(7);
 	printf("ft_print_combn(0) = '");
 	fflush(stdout);
