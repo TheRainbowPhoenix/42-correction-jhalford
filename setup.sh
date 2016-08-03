@@ -4,7 +4,7 @@ if [ ! -d $JHALFORD_PATH ]; then
 	git clone https://github.com/jzck/42-correction-jhalford.git ~/
 fi
 
-command -v jhalford-corr >/dev/null || cat $JHALFORD_PATH/jhalford-corr-install.sh >> ~/.zshrc
+command -v jhalford-corr >/dev/null || echo "source "$JHALFORD_PATH"/jhalford-corr-install.sh" >> ~/.zshrc
 
 source $JHALFORD_PATH/update-git.sh
 source $JHALFORD_PATH/jhalford-corr-install.sh
