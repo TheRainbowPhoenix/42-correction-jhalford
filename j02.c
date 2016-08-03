@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/03 19:58:17 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/03 21:08:56 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,17 +116,17 @@ int		main(void)
 	ft_putnbr(0);
 	printf("\n");
 
-	printf("ft_is_putnbr(10) = ");		
+	printf("ft_putnbr(10) = ");		
 	fflush(stdout);
 	ft_putnbr(10);
 	printf("\n");
 
-	printf("ft_is_putnbr(1234567) = ");		
+	printf("ft_putnbr(1234567) = ");		
 	fflush(stdout);
 	ft_putnbr(1234567);
 	printf("\n");
 
-	printf("ft_is_putnbr(-876543210) = ");		
+	printf("ft_putnbr(-876543210) = ");		
 	fflush(stdout);
 	ft_putnbr(-876543210);
 	printf("\n");
