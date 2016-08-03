@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/03 17:30:28 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/03 18:41:00 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 #include "ex03/ft_div_mod.c"
 #endif
 #ifdef ex04
-#include "ex04/ft_ultimate_div_mod"
+#include "ex04/ft_ultimate_div_mod.c"
 #endif
 #ifdef ex05
 #include "ex05/ft_putstr.c"
@@ -50,8 +50,14 @@ void	ft_putchar(char c)
 
 void	start_exo(int num)
 {
-	getchar();	
+	getchar();
 	printf("\nex%02d:\n", num);
+}
+
+void	print_ok()
+{
+	printf("tests OK\n");
+	printf("Entrée pour passer a l'exo suivant\n");
 }
 
 int		ft_int_test(int a, int b)
@@ -66,17 +72,112 @@ int		ft_int_test(int a, int b)
 int		main(void)
 {
 	int	err = 0;
-	printf("correction d02 by Jack\n");
+	printf("----------------------\n");
+	printf("    correction d03\n");
 	printf("----------------------\n");
 
 	#ifdef ex00
 	start_exo(0);
-	int	*nbr = 30
-	ft_ft();
+	int	nbr;
+	nbr = 30;
+	ft_ft(&nbr);
 	err += ft_int_test(nbr, 42);
 	if (err)
-		printf("ft_ft() ne fonctionne pas");
+	{
+		printf("ft_ft() ne fonctionne pas:");
+		nbr = 30;
+		printf("valeur avant  : %i\n", nbr);
+		ft_ft(&nbr);
+		printf("valeur apres : %i\n", nbr);
+	}
 	else
-		printf("Tests OK");
+		print_ok();
+	#endif
+
+	/* #ifdef ex01 */
+	/* start_exo(1); */
+	/* err = 0; */
+	/* int	********nbr1; */
+	/* ********nbr1 = 10; */
+	/* ft_ultimate_ft(&nbr1); */
+	/* err += ft_int_test(********nbr, 42); */
+	/* if (err) */
+	/* { */
+	/* 	printf("ft_ultimate_ft() ne fonctionne pas:"); */
+	/* 	nbr = 30; */
+	/* 	printf("valeur avant  : %i\n", ********nbr); */
+	/* 	ft_ultimate_ft(&nbr); */
+	/* 	printf("valeur apres : %i\n", ********nbr); */
+	/* } */
+	/* else */
+	/* 	print_ok(); */
+	/* #endif */
+
+	#ifdef ex02
+	start_exo(2);
+	err = 0;
+	
+	int	a = 10;
+	int b = 434;
+	ft_swap(&a, &b);
+	err += ft_int_test(a, 434);
+	err += ft_int_test(b, 10);
+	if (err)
+	{
+		printf("ft_swap() ne fonctionne pas:");
+		a = 10;
+		b = 434;
+		printf("avant : a=%i\tb=%i\n", a, b);
+		ft_swap(&a, &b);
+		printf("avant : a=%i\tb=%i\n", a, b);
+	}
+	else
+		print_ok();
+	#endif
+
+	#ifdef ex03
+	start_exo(3);
+	err = 0;
+	
+	a = 27;
+	b = 4;
+	int div;
+	int mod;
+	ft_div_mod(a, b, &div, &mod);
+	if (div != a / b)
+		err++;
+	if (mod != a % b)
+		err++;
+	if (err)
+	{
+		printf("ft_div_mod() ne fonctionne pas:");
+		a = 10;
+		b = 434;
+		printf("ft_div_mod(%i, %i, &div, &mod)\n", a, b);
+		printf("div = %i\tmod = %i\n", div, mod);
+	}
+	else
+		print_ok();
+	#endif
+
+	#ifdef ex04
+	start_exo(4);
+	err = 0;
+	
+	int	aa = a;
+	int	bb = b;
+	ft_ultimate_div_mod(&aa, &bb);
+	if (aa != a / b)
+		err++;
+	if (bb != a % b)
+		err++;
+	if (err)
+	{
+		printf("ft_ultimate_div_mod() ne fonctionne pas:");
+		printf("ft_div_mod(%i, %i)\n", a, b);
+		printf("sortie: a = %i\tb = %i\n", aa, bb);
+	}
+	else
+		print_ok();
 	#endif
 }

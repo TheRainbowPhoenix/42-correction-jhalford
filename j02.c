@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/03 17:32:06 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/03 17:49:41 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,8 @@ void	start_exo(int num)
 
 int		main(void)
 {
-	printf("correction d02 by Jack\n");
+	printf("----------------------\n");
+	printf("    correction d02\n");
 	printf("----------------------\n");
 
 	#ifdef ex00
