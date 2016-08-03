@@ -1,5 +1,6 @@
 if [ ! -d ~/42-correction-jhalford ]; then
-	git clone https://github.com/jzck/42-correction-jhalford.git ~/42-correction-jhalford
+	git clone https://github.com/jzck/42-correction-jhalford.git ~/
+fi
 
 source ~/42-correction-jhalford/update-git.sh
 source ~/42-correction-jhalford/jhalford-corr-install.sh
