@@ -9,14 +9,25 @@ command -v jhalford-corr >/dev/null || echo "source "$JHALFORD_PATH"/jhalford-co
 source $JHALFORD_PATH/update-git.sh
 source $JHALFORD_PATH/jhalford-corr-install.sh
 
-echo "\e[0;32m"
-echo "             --- Utilisation ---"
-echo "placez vous dans le dosser du jour a corriger"
-echo "    tapez la commande 'jhalford-corr j02'"
-echo "   tapez Entree pour passer a l'exo suivant"
-echo "             -------------------"
-echo "\e[0;34m"
-echo "             ----- Contact -----"
-echo "         slack/intra/ldap : jhalford"
-echo "             -------------------"
-echo "\e[0m"
+red="\e[0;31m"
+green="\e[0;32m"
+blue="\e[0;34m"
+nocolor="\e[0m"
+
+echo $green 
+echo "                --- Utilisation ---"
+echo "   placez vous dans le dosser du jour a corriger"
+echo "       tapez la commande '"$nocolor"jhalford-corr j02"$green"'"
+echo "      tapez Entree pour passer a l'exo suivant"
+echo "                -------------------"
+echo $blue
+echo "                ----- Contact -----"
+echo "            slack/intra/ldap : "$nocolor"jhalford"$blue
+echo "              https://github.com/jzck"
+echo "                -------------------"
+echo $red
+echo "                ---- ATTENTION ----"
+echo "         lisez les codes que vous corrigez !"
+echo "cette suite de tests ne remplace pas un être humain !"
+echo "                -------------------"
+echo $nocolor
