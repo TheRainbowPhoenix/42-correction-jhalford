@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/03 19:46:10 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/03 19:58:17 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,11 +95,13 @@ int		main(void)
 	#ifdef ex04
 	start_exo(4);
 	ft_print_comb();
+	fflush(stdout);
 	#endif
 
 	#ifdef ex05
 	start_exo(5);
 	ft_print_comb2();	
+	fflush(stdout);
 	#endif
 
 	#ifdef ex06
@@ -107,15 +109,27 @@ int		main(void)
 	printf("ft_putnbr(-10) = ");		
 	fflush(stdout);
 	ft_putnbr(-10);
-	printf(" (correct is '-10')\n");
+	printf("\n");
+
 	printf("ft_putnbr(0) = ");		
 	fflush(stdout);
 	ft_putnbr(0);
-	printf(" (correct is '0')\n");
-	printf("ft_is_negative(+10) = ");		
+	printf("\n");
+
+	printf("ft_is_putnbr(10) = ");		
 	fflush(stdout);
 	ft_putnbr(10);
-	printf(" (correct is '10')\n");
+	printf("\n");
+
+	printf("ft_is_putnbr(1234567) = ");		
+	fflush(stdout);
+	ft_putnbr(1234567);
+	printf("\n");
+
+	printf("ft_is_putnbr(-876543210) = ");		
+	fflush(stdout);
+	ft_putnbr(-876543210);
+	printf("\n");
 	#endif
 
 	#ifdef ex07
@@ -132,9 +146,9 @@ int		main(void)
 	fflush(stdout);
 	ft_print_combn(2);
 	printf("'\n");
-	printf("ft_print_combn(10) = '");
+	printf("ft_print_combn(9) = '");
 	fflush(stdout);
-	ft_print_combn(10);
+	ft_print_combn(9);
 	printf("'\n");
 	#endif
 	return 0;
