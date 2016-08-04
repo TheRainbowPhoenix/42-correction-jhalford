@@ -10,7 +10,7 @@ executez la commande suivante dans votre shell
 ## Corriger un camarade
 
 1. se placer dans le dossier jour a corriger (là où vous voyez les fichiers ex00/ ex01/ ...etc)
-2. executer `jhalford-corr j02 ex02` en remplacant 'j02' par le jour à corriger
+2. executer `jhalford-corr j02 ex02` en remplacant 'j02' et 'ex02'
 3. appuyer sur entrée pour passer à l'exercice suivant
 
 ## Tester son code
