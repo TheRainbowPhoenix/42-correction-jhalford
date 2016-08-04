@@ -28,4 +28,5 @@ executez la commande suivante dans votre shell
 | jour | tests prêts |
 |---   |--- |
 |  02  | 7/7 |
-|  03  | 4/9 (sauf ex01) |
+|  03  | 9/9 (sauf ex01) |
+|  04  | 0/9 (en cours) |
