@@ -20,7 +20,7 @@ executez la commande suivante dans votre shell
 #### Attention
   - La suite de tests est écrite avant le passage de la moulinette chaque jour. Tirez vos conclusions.
   - La suite de tests ne recherche pas:  
-    - Les oublis de prototypages (ex: `void ft_putchar(char c)`)  
+    - Les oublis de prototypages (ex: `void ft_putchar(char c);`)  
     - Les fautes de norme (utiliser la commande `norminette`)
 
 ## Avancement
