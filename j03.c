@@ -6,13 +6,14 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/04 15:31:05 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/04 22:00:24 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include <unistd.h>
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 void	ft_putchar(char c)
 {
@@ -257,28 +258,25 @@ int		main(void)
 	err = 0;
 
 	char str8[100] = "2147483647";
-	int nbr8 = 2147483647;
-	if (nbr8 != ft_atoi(str8))
+	if (atoi(str8) != ft_atoi(str8))
 	{
 		err += 1;
 		printf("ex08 ne fonctionne pas: \n");
-		printf("ft_atoi(%s) = %i (%i attendu)\n", str8, ft_atoi(str8), nbr8);
+		printf("ft_atoi(%s) = %i (%i attendu)\n", str8, ft_atoi(str8), atoi(str8));
 	}
-	strcpy(str8, "12");
-	nbr8 = 12;
-	if (nbr8 != ft_atoi(str8))
+	strcpy(str8, "a12");
+	if (atoi(str8) != ft_atoi(str8))
 	{
 		err += 1;
 		printf("ex08 ne fonctionne pas: \n");
-		printf("ft_atoi(%s) = %i (%i attendu)\n", str8, ft_atoi(str8), nbr8);
+		printf("ft_atoi(%s) = %i (%i attendu)\n", str8, ft_atoi(str8), atoi(str8));
 	}
-	strcpy(str8, "0");
-	nbr8 = 0;
-	if (nbr8 != ft_atoi(str8))
+	strcpy(str8, "\t 21you");
+	if (atoi(str8) != ft_atoi(str8))
 	{
 		err += 1;
 		printf("ex08 ne fonctionne pas: \n");
-		printf("ft_atoi(%s) = %i (%i attendu)\n", str8, ft_atoi(str8), nbr8);
+		printf("ft_atoi(%s) = %i (%i attendu)\n", str8, ft_atoi(str8), atoi(str8));
 	}
 	if (err == 0)
 		print_ok();
@@ -286,7 +284,7 @@ int		main(void)
 
 #ifdef ex09
 	int i9 = 0;
-	int in9[10] = {0,0,10,-10,14,13,12,-100,28,28};
+	int in9[10] = {4356,4357,0,10,-10,14,13,12,-100,-247};
 	printf("avant: ");
 	while (i9 < 10)
 		printf("%i, ", in9[i9++]);
