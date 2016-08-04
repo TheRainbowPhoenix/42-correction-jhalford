@@ -1,3 +1,4 @@
+FLAGS = -Wall -Wextra -Werror
 EXOS = ex00/ft_print_alphabet.c \
 	   ex01/ft_print_reverse_alphabet.c \
 	   ex02/ft_print_numbers.c \
@@ -69,7 +70,7 @@ default:
 	@echo "il faut specifier le jour"
 
 j02:
-	gcc $@.c $(FLAGSj02) && ./a.out
+	gcc $(FLAGS) $@.c $(FLAGSj02) && ./a.out
 
 j03:
-	gcc $@.c $(FLAGSj03) && ./a.out
+	gcc $(FLAGS) $@.c $(FLAGSj03) && ./a.out
