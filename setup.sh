@@ -18,6 +18,10 @@ echo $green
 echo "                --- Utilisation ---"
 echo "   placez vous dans le dosser du jour a corriger"
 echo "      tapez la commande '"$nocolor"jhalford-corr j03 ex05"$green"'"
+echo "             pour corriger le j03 ex05"
+echo "                     ou alors"
+echo "      tapez la commande '"$nocolor"jhalford-corr j03"$green"'"
+echo "           pour corriger toute la journée"
 echo "                -------------------"
 echo $blue
 echo "                ----- Contact -----"
