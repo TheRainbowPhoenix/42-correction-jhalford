@@ -11,5 +11,9 @@ jhalford-corr () {
 	echo "cette suite de tests ne remplace pas un être humain !"
 	echo "                -------------------"
 	echo $nocolor
-	make $1
+	if [ -n "$2" ]; then
+		gcc $1.c -D $2 && ./a.out
+	else
+		make $1
+	fi
 }

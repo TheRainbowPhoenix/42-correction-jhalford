@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/03 18:41:00 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/04 10:11:54 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	start_exo(int num)
 void	print_ok()
 {
 	printf("tests OK\n");
-	printf("Entrée pour passer a l'exo suivant\n");
+	printf("Entrée pour passer à l'exercice suivant\n");
 }
 
 int		ft_int_test(int a, int b)
