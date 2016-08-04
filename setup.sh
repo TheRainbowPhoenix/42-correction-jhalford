@@ -1,13 +1,13 @@
 PATH_jhalford=~/42-correction-jhalford
 
-if [ ! -d $path_jhalford ]; then
+if [ ! -d $PATH_jhalford ]; then
 	git clone https://github.com/jzck/42-correction-jhalford.git ~/42-correction-jhalford/
 fi
 
-command -v jhalford-corr >/dev/null || echo "source "$path_jhalford"/jhalford-corr-install.sh" >> ~/.zshrc
+command -v jhalford-corr >/dev/null || echo "source "$PATH_jhalford"/jhalford-corr-install.sh" >> ~/.zshrc
 
-source $path_jhalford/update-git.sh
-source $path_jhalford/jhalford-corr-install.sh
+source $PATH_jhalford/update-git.sh
+source $PATH_jhalford/jhalford-corr-install.sh
 
 red="\e[0;31m"
 green="\e[0;32m"
