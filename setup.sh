@@ -17,7 +17,7 @@ nocolor="\e[0m"
 echo $green 
 echo "                --- Utilisation ---"
 echo "   placez vous dans le dosser du jour a corriger"
-echo "       tapez la commande '"$nocolor"jhalford-corr j02"$green"'"
+echo "tapez la commande '"$nocolor"jhalford-corr j03 ex05"$green"'"
 echo "      tapez Entree pour passer a l'exo suivant"
 echo "                -------------------"
 echo $blue
