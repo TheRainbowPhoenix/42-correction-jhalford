@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/04 14:32:40 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/04 15:22:38 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,9 +177,10 @@ int		main(void)
 		err++;
 	if (err)
 	{
-		printf("ft_ultimate_div_mod() ne fonctionne pas:");
-		printf("ft_div_mod(%i, %i)\n", a4, b4);
-		printf("sortie: a = %i\tb = %i\n", aa4, bb4);
+		printf("ex04 ne fonctionne pas:");
+		printf("ft_ultimate_div_mod(%i, %i)\n", a4, b4);
+		printf("div = %i (%i attendu)\n", aa4, a4 / b4);
+		printf("mod = %i (%i attendu)\n", bb4, a4 & b4);
 	}
 	else
 		print_ok();
