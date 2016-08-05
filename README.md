@@ -29,4 +29,4 @@ executez la commande suivante dans votre shell
 |---   |--- |
 |  02  | 7/7 |
 |  03  | 9/9 (sauf ex01) |
-|  04  | 0/9 (en cours) |
+|  04  | 9/9 |
