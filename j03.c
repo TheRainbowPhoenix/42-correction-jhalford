@@ -63,6 +63,18 @@ void	print_ok()
 	fflush(stdout);
 }
 
+int		ft_test_ex(char *in, int out, int nb, int exnb, char *exname)
+{
+	if (out != nb)
+	{
+		printf("ex%02d ne fonctionne pas:\n", exnb);
+		printf("%s(%s) = %i (%i attendu)\n", exname, in, out, nb);
+		return 1;
+	}
+	else
+		return 0;
+}
+
 int		ft_int_test(int a, int b)
 {
 	if (a == b)
@@ -254,30 +266,16 @@ int		main(void)
 #endif
 
 #ifdef ex08
-	start_exo(8);
+	exname = "ft_atoi";
+	exnb = 8;
+	start_exo(exnb);
+	start_exo(exnb);
 	err = 0;
-
-	char str8[100] = "02147483647";
-	if (atoi(str8) != ft_atoi(str8))
-	{
-		err += 1;
-		printf("ex08 ne fonctionne pas: \n");
-		printf("ft_atoi(%s) = %i (%i attendu)\n", str8, ft_atoi(str8), atoi(str8));
-	}
-	strcpy(str8, "a12");
-	if (atoi(str8) != ft_atoi(str8))
-	{
-		err += 1;
-		printf("ex08 ne fonctionne pas: \n");
-		printf("ft_atoi(%s) = %i (%i attendu)\n", str8, ft_atoi(str8), atoi(str8));
-	}
-	strcpy(str8, "\t 21you");
-	if (atoi(str8) != ft_atoi(str8))
-	{
-		err += 1;
-		printf("ex08 ne fonctionne pas: \n");
-		printf("ft_atoi(%s) = %i (%i attendu)\n", str8, ft_atoi(str8), atoi(str8));
-	}
+	err += ft_test_ex("02147483647",ft_atoi("02147483647"),2147483647,exnb,exname);
+	err += ft_test_ex("a12",ft_atoi("a12"),0,exnb,exname);
+	err += ft_test_ex("\t 21u",ft_atoi("\t 21u"),21,exnb,exname);
+	err += ft_test_ex(" \v-12",ft_atoi(" \v-12"),-12,exnb,exname);
+	err += ft_test_ex("--12",ft_atoi("--12"),0,exnb,exname);
 	if (err == 0)
 		print_ok();
 #endif
