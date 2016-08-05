@@ -43,3 +43,6 @@ j03:
 
 j04:
 	gcc $(FLAGS) $@.c $(foreach EX_PATH, $(EXOSj04), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
+
+j05:
+	echo "pas de suite de tests !"
