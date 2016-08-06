@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/06 14:14:22 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/06 14:33:27 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+#include "corrlib.h"
 
 #ifdef ex00
 #include "ex00/ft_ft.c"
@@ -50,39 +46,6 @@ void	ft_putchar(char c)
 #ifdef ex09
 #include "ex09/ft_sort_integer_table.c"
 #endif
-
-void	start_exo(int num)
-{
-	getchar();
-	printf("\nex%02d:\n", num);
-}
-
-void	print_ok()
-{
-	printf("tests OK\n");
-	fflush(stdout);
-}
-
-int		ft_test_ex(char *in, int out, int nb, int exnb, char *exname)
-{
-	if (out != nb)
-	{
-		printf("ex%02d ne fonctionne pas:\n", exnb);
-		printf("%s(%s) = %i (%i attendu)\n", exname, in, out, nb);
-		return 1;
-	}
-	else
-		return 0;
-}
-
-int		ft_int_test(int a, int b)
-{
-	if (a == b)
-		return (0);
-	else
-		return (1);
-}
-
 
 int		main(void)
 {
