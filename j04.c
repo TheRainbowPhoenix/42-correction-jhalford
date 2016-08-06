@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/05 15:02:57 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/05 16:06:01 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,6 +185,7 @@ int		main(void)
 	err += ft_test_ex("145",ft_sqrt(145),0,exnb,exname);
 	err += ft_test_ex("146",ft_sqrt(146),0,exnb,exname);
 	err += ft_test_ex("147",ft_sqrt(147),0,exnb,exname);
+	err += ft_test_ex("2147483647",ft_sqrt(2147483647),0,exnb,exname);
 	if (!err)
 		print_ok();
 #endif

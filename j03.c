@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/04 22:34:35 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/06 14:14:22 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,9 @@ int		ft_int_test(int a, int b)
 
 int		main(void)
 {
-	int	err = 0;
+	int		err = 0;
+	char	*exname;
+	int		exnb;
 	printf("----------------------\n");
 	printf("    correction d03\n");
 	printf("----------------------\n");
@@ -269,18 +271,20 @@ int		main(void)
 	exname = "ft_atoi";
 	exnb = 8;
 	start_exo(exnb);
-	start_exo(exnb);
 	err = 0;
 	err += ft_test_ex("02147483647",ft_atoi("02147483647"),2147483647,exnb,exname);
 	err += ft_test_ex("a12",ft_atoi("a12"),0,exnb,exname);
 	err += ft_test_ex("\t 21u",ft_atoi("\t 21u"),21,exnb,exname);
 	err += ft_test_ex(" \v-12",ft_atoi(" \v-12"),-12,exnb,exname);
+	err += ft_test_ex("-1-12",ft_atoi("-1-12"),-1,exnb,exname);
 	err += ft_test_ex("--12",ft_atoi("--12"),0,exnb,exname);
 	if (err == 0)
 		print_ok();
 #endif
 
 #ifdef ex09
+	exnb = 9;
+	start_exo(exnb);
 	int i9 = 0;
 	int in9[10] = {4356,4357,0,10,-10,14,13,12,-100,-247};
 	printf("avant: ");
