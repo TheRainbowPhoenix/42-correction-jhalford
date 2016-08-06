@@ -6,19 +6,11 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/05 15:02:57 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/06 15:36:53 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+#include "corrlib.h"
 
 #ifdef ex00
 #include "ex00/ft_putstr.c"
@@ -60,7 +52,7 @@ void	ft_putchar(char c)
 #include "ex12/ft_str_is_numeric.c"
 #endif
 #ifdef ex13
-#include "ex13/ft_str_is_lozercase.c"
+#include "ex13/ft_str_is_lowercase.c"
 #endif
 #ifdef ex14
 #include "ex14/ft_str_is_uppercase.c"
@@ -93,51 +85,77 @@ void	ft_putchar(char c)
 #include "ex23/ft_print_memory.c"
 #endif
 
-void	start_exo(int num)
-{
-	getchar();
-	printf("\nex%02d:\n", num);
-}
-
-void	print_ok()
-{
-	printf("tests OK\n");
-	fflush(stdout);
-}
-
-/* int		ft_test_ex(char *in, char *out, int nb, int exnb, char *exname) */
-/* { */
-/* 	if (out != nb) */
-/* 	{ */
-/* 		printf("ex%02d ne fonctionne pas:\n", exnb); */
-/* 		printf("%s(%s) = %i (%i attendu)\n", exname, in, out, nb); */
-/* 		return 1; */
-/* 	} */
-/* 	else */
-/* 		return 0; */
-/* } */
-
-int		ft_cmp_func1(int nb_params, char* (*f1)(), char* (*f2)(), int exnb, char *exname)
-{
-}
-
 int		main(void)
 {
 	int		err = 0;
 	char	*exname;
 	int		exnb;
 
-	printf("----------------------\n");
-	printf("    correction d05\n");
-	printf("----------------------\n");
-
+	start_day(5);
 #ifdef ex00
+	exnb = 1;
+	start_exo(exnb);
+
+	char str5[100] = "voila une chaine";
+	printf("ft_putstr(%s): '", str5);
+	fflush(stdout);
+	ft_putstr(str5);
+	printf("'\n");
+
+	strcpy(str5, "\ttest\t2");
+	printf("ft_putstr(%s): '", str5);
+	fflush(stdout);
+	ft_putstr(str5);
+	printf("'\n");
 #endif
 
 #ifdef ex01
+	exnb = 1;
+	start_exo(1);
+	printf("ft_putnbr(-10) = ");
+	fflush(stdout);
+	ft_putnbr(-10);
+	printf("\n");
+
+	printf("ft_putnbr(0) = ");
+	fflush(stdout);
+	ft_putnbr(0);
+	printf("\n");
+
+	printf("ft_putnbr(10) = ");
+	fflush(stdout);
+	ft_putnbr(10);
+	printf("\n");
+
+	printf("ft_putnbr(-2147483647) = ");
+	fflush(stdout);
+	ft_putnbr(-2147483647);
+	printf("\n");
+
+	printf("ft_putnbr(-2147483648) = ");
+	fflush(stdout);
+	ft_putnbr(-2147483648);
+	printf("\n");
+
+	printf("ft_putnbr(2147483647) = ");
+	fflush(stdout);
+	ft_putnbr(2147483647);
+	printf("\n");
 #endif
 
 #ifdef ex02
+	exname = "ft_atoi";
+	exnb = 2;
+	start_exo(exnb);
+	err = 0;
+	err += ft_test_ex("02147483647",ft_atoi("02147483647"),2147483647,exnb,exname);
+	err += ft_test_ex("a12",ft_atoi("a12"),0,exnb,exname);
+	err += ft_test_ex("\t 21u",ft_atoi("\t 21u"),21,exnb,exname);
+	err += ft_test_ex(" \v-12",ft_atoi(" \v-12"),-12,exnb,exname);
+	err += ft_test_ex("-1-12",ft_atoi("-1-12"),-1,exnb,exname);
+	err += ft_test_ex("--12",ft_atoi("--12"),0,exnb,exname);
+	if (err == 0)
+		print_ok();
 #endif
 
 #ifdef ex03
