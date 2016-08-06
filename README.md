@@ -1,5 +1,5 @@
 # 42-correct-jhalford
-scripts de correction pour la piscine c de 42 en aout 2016.
+Suite de tests de correction pour la piscine c de 42 en aout 2016.
 
 ## Installation
 
@@ -7,21 +7,14 @@ executez la commande suivante dans votre shell
 
 `curl -L https://raw.githubusercontent.com/jzck/42-correction-jhalford/master/setup.sh > /tmp/jh && source /tmp/jh`
 
-## Corriger un camarade
+## Utilisation
 
 1. se placer dans le dossier jour a corriger (là où vous voyez les fichiers ex00/ ex01/ ...etc)
 2. executer `jhalford-corr j02 ex02` en remplacant 'j02' et 'ex02'
-3. appuyer sur entrée pour passer à l'exercice suivant
-
-## Tester son code
-
-`jhalford-corr j02 ex04` compile et teste l'exercice 04 du jour 02.
 
 #### Attention
+  - ft_putchar doit être prototypée en `void` et pas en `int`
   - La suite de tests est écrite avant le passage de la moulinette chaque jour. Tirez vos conclusions.
-  - La suite de tests ne recherche pas:  
-    - Les oublis de prototypages (ex: `void ft_putchar(char c);`)  
-    - Les fautes de norme (utiliser la commande `norminette`)
 
 ## Avancement
 
@@ -30,3 +23,4 @@ executez la commande suivante dans votre shell
 |  02  | 7/7 |
 |  03  | 9/9 (sauf ex01) |
 |  04  | 9/9 |
+|  05  | 5/23|
