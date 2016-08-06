@@ -3,5 +3,6 @@ if [ ! -d ~/42-correction-jhalford ]; then
 else
 	cd ~/42-correction-jhalford
 	git pull
+	source jhalford-corr-install.sh
 	cd -
 fi
