@@ -3,8 +3,17 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
+void	start_day(int num)
+{
+	printf("----------------------\n");
+	printf("   correction day %02d\n", num);
+	printf("----------------------\n");
+	printf("  appuie sur Entrée !\n");
+}
+
 void	start_exo(int num)
 {
+	printf("\nAppuie sur Entrée pour continuer\n");
 	getchar();
 	printf("\nex%02d:\n", num);
 }

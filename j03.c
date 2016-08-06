@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/06 14:33:27 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/06 15:09:46 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,7 @@ int		main(void)
 	int		err = 0;
 	char	*exname;
 	int		exnb;
-	printf("----------------------\n");
-	printf("    correction d03\n");
-	printf("----------------------\n");
+	start_day(2);
 
 #ifdef ex00
 	start_exo(0);
