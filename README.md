@@ -1,5 +1,5 @@
 # Correction automatique 42
-Suite de tests de correction pour la piscine c de 42 en aout 2016.
+Suite de tests pour la piscine c de 42 en aout 2016.
 
 ## Installation
 
