@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/06 15:41:51 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/06 15:42:31 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,6 @@
 #ifdef ex07
 #include "ex07/ft_print_combn.c"
 #endif
-
-void	start_exo(int num)
-{
-	getchar();	
-	printf("\nex%02d:\n", num);
-}
 
 int		main(void)
 {
