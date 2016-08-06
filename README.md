@@ -9,8 +9,8 @@ copier/coller dans votre terminal:
 
 ## Utilisation
 
-1. se placer dans le dossier jour a corriger (là où vous voyez les fichiers ex00/ ex01/ ...etc).
-2. executer `jhalford-corr j02 ex02` en remplacant 'j02' et 'ex02'.
+1. Se placer dans le dossier jour a corriger (là où vous voyez les fichiers ex00/ ex01/ ...etc).
+2. Executer `jhalford-corr j02 ex02` en remplacant 'j02' et 'ex02'.
 
 #### Attention
   - ft_putchar doit être prototypée en `void` et pas en `int`.
