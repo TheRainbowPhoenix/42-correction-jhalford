@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/06 15:09:46 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/06 16:01:34 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -217,7 +217,6 @@ int		main(void)
 	char str7[100] = "test";
 	char *out7 = "tset";
 	ft_strrev(str7);
-	/* printf("%s, %s\n", str7, str7r); */
 	if (strcmp(str7, out7))
 	{
 		err += 1;
@@ -239,6 +238,8 @@ int		main(void)
 	err += ft_test_ex(" \v-12",ft_atoi(" \v-12"),-12,exnb,exname);
 	err += ft_test_ex("-1-12",ft_atoi("-1-12"),-1,exnb,exname);
 	err += ft_test_ex("--12",ft_atoi("--12"),0,exnb,exname);
+	err += ft_test_ex(" -+12",ft_atoi(" -+12"),0,exnb,exname);
+	err += ft_test_ex("+12",ft_atoi("+12"),12,exnb,exname);
 	if (err == 0)
 		print_ok();
 #endif

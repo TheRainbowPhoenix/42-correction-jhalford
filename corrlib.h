@@ -13,7 +13,6 @@ void	start_day(int num)
 	printf("----------------------\n");
 	printf("   correction day %02d\n", num);
 	printf("----------------------\n");
-	printf("  appuie sur Entrée !\n");
 }
 
 void	start_exo(int num)
@@ -29,12 +28,29 @@ void	print_ok()
 	fflush(stdout);
 }
 
-int		ft_test_ex(char *in, int out, int nb, int exnb, char *exname)
+void	doesnt_work(int exnb)
 {
-	if (out != nb)
+	printf("ex%02d ne fonctionne pas:\n", exnb);
+}
+
+int		ft_test_ex(char *in, int out, int correct, int exnb, char *exname)
+{
+	if (out != correct)
 	{
-		printf("ex%02d ne fonctionne pas:\n", exnb);
-		printf("%s(%s) = %i (%i attendu)\n", exname, in, out, nb);
+		doesnt_work(exnb);
+		printf("%s('%s') = %i (%i attendu)\n", exname, in, out, correct);
+		return 1;
+	}
+	else
+		return 0;
+}
+
+int		ft_test_ex2(char *in, char *out, char *correct, int exnb, char *exname)
+{
+	if (strcmp(out, correct))
+	{
+		doesnt_work(exnb);
+		printf("%s('%s') = '%s' ('%s' attendu)\n", exname, in, out, correct);
 		return 1;
 	}
 	else
@@ -47,4 +63,11 @@ int		ft_int_test(int a, int b)
 		return (0);
 	else
 		return (1);
+}
+
+void	init_in(char *in, char *a, char *b)
+{
+	strcpy(in, a);
+	strcat(in, "' , '");
+	strcat(in, b);
 }

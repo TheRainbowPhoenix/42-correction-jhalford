@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/06 15:36:53 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/06 18:29:43 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@
 #include "ex20/ft_putnbr_base.c"
 #endif
 #ifdef ex21
-#include "ex21/ft_ft_atoi_base.c"
+#include "ex21/ft_atoi_base.c"
 #endif
 #ifdef ex22
 #include "ex22/ft_putstr_non_printable.c"
@@ -90,10 +90,13 @@ int		main(void)
 	int		err = 0;
 	char	*exname;
 	int		exnb;
+	char	a[100];
+	char	b[100];
+	char	in[100];
 
 	start_day(5);
 #ifdef ex00
-	exnb = 1;
+	exnb = 0;
 	start_exo(exnb);
 
 	char str5[100] = "voila une chaine";
@@ -109,9 +112,9 @@ int		main(void)
 	printf("'\n");
 #endif
 
+	exnb++;
 #ifdef ex01
-	exnb = 1;
-	start_exo(1);
+	start_exo(exnb);
 	printf("ft_putnbr(-10) = ");
 	fflush(stdout);
 	ft_putnbr(-10);
@@ -143,9 +146,9 @@ int		main(void)
 	printf("\n");
 #endif
 
+	exnb++;
 #ifdef ex02
 	exname = "ft_atoi";
-	exnb = 2;
 	start_exo(exnb);
 	err = 0;
 	err += ft_test_ex("02147483647",ft_atoi("02147483647"),2147483647,exnb,exname);
@@ -158,24 +161,212 @@ int		main(void)
 		print_ok();
 #endif
 
+	exnb++;
 #ifdef ex03
+	exname = "ft_strcpy";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "a");
+	strcpy(b, "short");
+	init_in(in, a, b);
+	err += ft_test_ex2(in, ft_strcpy(a, b), strcpy(a, b), exnb, exname);
+	strcpy(a, "test");
+	strcpy(b, "this is a longer string.");
+	init_in(in, a, b);
+	err += ft_test_ex2(in, ft_strcpy(a, b), strcpy(a, b), exnb, exname);
+	if (!err)
+		print_ok();
 #endif
 
+	exnb++;
 #ifdef ex04
+	exname = "ft_strncpy";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "first str");
+	strcpy(b, "second part");
+	init_in(in, a, b);
+	strcat(in, ", 3");
+	err += ft_test_ex2(in, ft_strncpy(a, b, 3), strncpy(a, b, 3), exnb, exname);
+	strcpy(a, "first str");
+	strcpy(b, "second part");
+	init_in(in, a, b);
+	strcat(in, ", 12");
+	err += ft_test_ex2(in, ft_strncpy(a, b, 12), strncpy(a, b, 12), exnb, exname);
+	if (!err)
+		print_ok();
 #endif
 
+	exnb++;
 #ifdef ex05
+	exname = "ft_strstr";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "this is a haystack");
+	strcpy(b, "haystack");
+	init_in(in, a, b);
+	err += ft_test_ex2(in, ft_strstr(a, b), strstr(a, b), exnb, exname);
+	strcpy(a, "this is a haystack");
+	strcpy(b, "is");
+	init_in(in, a, b);
+	err += ft_test_ex2(in, ft_strstr(a, b), strstr(a, b), exnb, exname);
+	if (!err)
+		print_ok();
 #endif
 
+	exnb++;
 #ifdef ex06
 #endif
 
+	exnb++;
 #ifdef ex07
 #endif
 
+	exnb++;
 #ifdef ex08
 #endif
 
+	exnb++;
 #ifdef ex09
 #endif
+
+	exnb++;
+#ifdef ex10
+#endif
+
+	exnb++;
+#ifdef ex11
+	exname = "ft_str_is_alpha";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+	err += ft_test_ex(a, ft_str_is_alpha(a), 1, exnb, exname);
+	strcpy(a, "abcdefghijklmnopqrstuvwxyz");
+	err += ft_test_ex(a, ft_str_is_alpha(a), 1, exnb, exname);
+	strcpy(a, "contientPasSeuLementDesLettres[");
+	err += ft_test_ex(a, ft_str_is_alpha(a), 0, exnb, exname);
+	strcpy(a, "0contientpasSeuLementDeLettres");
+	err += ft_test_ex(a, ft_str_is_alpha(a), 0, exnb, exname);
+	strcpy(a, "");
+	err += ft_test_ex(a, ft_str_is_alpha(a), 1, exnb, exname);
+	if (!err)
+		print_ok();
+#endif
+
+	exnb++;
+#ifdef ex12
+	exname = "ft_str_is_numeric";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "0123456789");
+	err += ft_test_ex(a, ft_str_is_numeric(a), 1, exnb, exname);
+	strcpy(a, "0123456789a");
+	err += ft_test_ex(a, ft_str_is_numeric(a), 0, exnb, exname);
+	strcpy(a, "");
+	err += ft_test_ex(a, ft_str_is_numeric(a), 1, exnb, exname);
+	if (!err)
+		print_ok();
+#endif
+
+	exnb++;
+#ifdef ex13
+	exname = "ft_str_is_lowercase";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "abcdefghijklmnopqrstuvwxyz");
+	err += ft_test_ex(a, ft_str_is_lowercase(a), 1, exnb, exname);
+	strcpy(a, "abcdefghijklmnopqrstuvwxyz0");
+	err += ft_test_ex(a, ft_str_is_lowercase(a), 0, exnb, exname);
+	strcpy(a, "");
+	err += ft_test_ex(a, ft_str_is_lowercase(a), 1, exnb, exname);
+	if (!err)
+		print_ok();
+#endif
+
+	exnb++;
+#ifdef ex14
+	exname = "ft_str_is_uppercase";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+	err += ft_test_ex(a, ft_str_is_uppercase(a), 1, exnb, exname);
+	strcpy(a, "ABCDEFGHIJKLMNOPQRSTUVWXYZ0");
+	err += ft_test_ex(a, ft_str_is_uppercase(a), 0, exnb, exname);
+	strcpy(a, "");
+	err += ft_test_ex(a, ft_str_is_uppercase(a), 1, exnb, exname);
+	if (!err)
+		print_ok();
+#endif
+
+	exnb++;
+#ifdef ex15
+	exname = "ft_str_is_printable";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+	err += ft_test_ex(a, ft_str_is_printable(a), 1, exnb, exname);
+	strcpy(a, "ABCDEFGHIJKLMNOPQRSTUVWXYZ0");
+	err += ft_test_ex(a, ft_str_is_printable(a), 1, exnb, exname);
+	strcpy(a, "0123\x1F abc");
+	err += ft_test_ex(a, ft_str_is_printable(a), 0, exnb, exname);
+	if (!err)
+		print_ok();
+#endif
+
+	exnb++;
+#ifdef ex16
+	exname = "ft_strcat";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "first part of str");
+	strcpy(b, "second part");
+	init_in(in, a, b);
+	err += ft_test_ex2(in, ft_strcat(a, b), strcat(a, b), exnb, exname);
+	if (!err)
+		print_ok();
+#endif
+
+	exnb++;
+#ifdef ex17
+	exname = "ft_strncat";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "first part of str");
+	strcpy(b, "second part");
+	init_in(in, a, b);
+	strcat(in, ", 3");
+	err += ft_test_ex2(in, ft_strncat(a, b, 3), strncat(a, b, 3), exnb, exname);
+	strcpy(a, "first part of str");
+	strcpy(b, "second part");
+	init_in(in, a, b);
+	strcat(in, ", 10");
+	err += ft_test_ex2(in, ft_strncat(a, b, 10), strncat(a, b, 10), exnb, exname);
+	if (!err)
+		print_ok();
+#endif
+
+	exnb++;
+#ifdef ex18
+#endif
+
+	exnb++;
+#ifdef ex19
+#endif
+
+	exnb++;
+#ifdef ex20
+#endif
+
+	exnb++;
+#ifdef ex21
+#endif
+
+	exnb++;
+#ifdef ex22
+#endif
+
+	exnb++;
+#ifdef ex23
+#endif
+
 }
