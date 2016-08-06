@@ -6,16 +6,11 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/06 15:37:36 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/06 15:41:51 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corrlib.h"
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 #ifdef ex00
 #include "ex00/ft_print_alphabet.c"
