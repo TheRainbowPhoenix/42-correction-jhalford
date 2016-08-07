@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/06 18:29:43 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/07 18:55:06 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -216,22 +216,101 @@ int		main(void)
 
 	exnb++;
 #ifdef ex06
+	exname = "ft_strcmp";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "string1");
+	strcpy(b, "string2");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_strcmp(a, b), strcmp(a, b), exnb, exname);
+	strcpy(a, "");
+	strcpy(b, "\tstring2");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_strcmp(a, b), strcmp(a, b), exnb, exname);
+	strcpy(a, "");
+	strcpy(b, "");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_strcmp(a, b), strcmp(a, b), exnb, exname);
+	strcpy(a, "ABCDEF");
+	strcpy(b, "ABCD");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_strcmp(a, b), strcmp(a, b), exnb, exname);
+	if (!err)
+		print_ok();
 #endif
 
 	exnb++;
 #ifdef ex07
+	exname = "ft_strncmp";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "string1");
+	strcpy(b, "string2");
+	init_in(in, a, b);
+	strcat(a, ", 0");
+	err += ft_test_ex(in, ft_strncmp(a, b, 0), strncmp(a, b, 0), exnb, exname);
+	strcpy(a, "");
+	strcpy(b, "\tstring2");
+	init_in(in, a, b);
+	strcat(a, ", 20");
+	err += ft_test_ex(in, ft_strncmp(a, b, 20), strncmp(a, b, 20), exnb, exname);
+	strcpy(a, "");
+	strcpy(b, "");
+	init_in(in, a, b);
+	strcat(a, ", 2");
+	err += ft_test_ex(in, ft_strncmp(a, b, 2), strncmp(a, b, 2), exnb, exname);
+	strcpy(a, "ABCDEF");
+	strcpy(b, "ABCD");
+	init_in(in, a, b);
+	strcat(a, ", 2");
+	err += ft_test_ex(in, ft_strncmp(a, b, 2), strncmp(a, b, 2), exnb, exname);
+	if (!err)
+		print_ok();
 #endif
 
 	exnb++;
 #ifdef ex08
+	exname = "ft_strupcase";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "abcdef");
+	err += ft_test_ex2(a, ft_strupcase(a), "ABCDEF", exnb, exname);
+	strcpy(a, "ABCDeF");
+	err += ft_test_ex2(a, ft_strupcase(a), "ABCDEF", exnb, exname);
+	strcpy(a, "01234a");
+	err += ft_test_ex2(a, ft_strupcase(a), "01234A", exnb, exname);
+	strcpy(a, "");
+	err += ft_test_ex2(a, ft_strupcase(a), "", exnb, exname);
+	if (!err)
+		print_ok();
 #endif
 
 	exnb++;
 #ifdef ex09
+	exname = "ft_strlowcase";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "ABCDEF");
+	err += ft_test_ex2(a, ft_strlowcase(a), "abcdef", exnb, exname);
+	strcpy(a, "ABCdEF");
+	err += ft_test_ex2(a, ft_strlowcase(a), "abcdef", exnb, exname);
+	strcpy(a, "01234A");
+	err += ft_test_ex2(a, ft_strlowcase(a), "01234a", exnb, exname);
+	strcpy(a, "");
+	err += ft_test_ex2(a, ft_strlowcase(a), "", exnb, exname);
+	if (!err)
+		print_ok();
 #endif
 
 	exnb++;
 #ifdef ex10
+	exname = "ft_strcapitalize";
+	start_exo(exnb);
+	err = 0;
+	strcpy(a, "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un");
+	err += ft_test_ex2(a, ft_strcapitalize(a), "Salut, Comment Tu Vas ? 42mots Quarante-Deux; Cinquante+Et+Un", exnb, exname);
+	if (!err)
+		print_ok();
 #endif
 
 	exnb++;
@@ -347,26 +426,212 @@ int		main(void)
 
 	exnb++;
 #ifdef ex18
+	exname = "ft_strlcat";
+	start_exo(exnb);
+	err = 0;
+
+	strcpy(a, "this is 10");
+	strcpy(b, "this 6");
+	init_in(in, a, b);
+	strcat(in, ", 2");
+	err += ft_test_ex(in, ft_strlcat(a, b, 2), strlcat(a, b, 2), exnb, exname);
+
+	strcpy(a, "this 6");
+	strcpy(b, "this is 10");
+	init_in(in, a, b);
+	strcat(in, ", 10");
+	err += ft_test_ex(in, ft_strlcat(a, b, 10), strlcat(a, b, 10), exnb, exname);
+
+	strcpy(a, "this 6");
+	strcpy(b, "this is 10");
+	init_in(in, a, b);
+	strcat(in, ", 15");
+	err += ft_test_ex(in, ft_strlcat(a, b, 15), strlcat(a, b, 15), exnb, exname);
+
+	strcpy(a, "this 6");
+	strcpy(b, "this is 10");
+	init_in(in, a, b);
+	strcat(in, ", 16");
+	err += ft_test_ex(in, ft_strlcat(a, b, 16), strlcat(a, b, 16), exnb, exname);
+
+	strcpy(a, "this 6");
+	strcpy(b, "this is 10");
+	init_in(in, a, b);
+	strcat(in, ", 17");
+	err += ft_test_ex(in, ft_strlcat(a, b, 17), strlcat(a, b, 17), exnb, exname);
+
+	strcpy(a, "this 6");
+	strcpy(b, "this is 10");
+	init_in(in, a, b);
+	strcat(in, ", 99");
+	err += ft_test_ex(in, ft_strlcat(a, b, 99), strlcat(a, b, 99), exnb, exname);
+
+	strcpy(a, "this 6");
+	strcpy(b, "this 10");
+	init_in(in, a, b);
+	strcat(in, ", 2");
+
+	strcpy(a, "this is 10");
+	strcpy(b, "this 6");
+	init_in(in, a, b);
+	strcat(in, ", 10");
+	err += ft_test_ex(in, ft_strlcat(a, b, 10), strlcat(a, b, 10), exnb, exname);
+	err += ft_test_ex(in, ft_strlcat(a, b, 10), strlcat(a, b, 10), exnb, exname);
+	if (!err)
+		print_ok();
 #endif
 
 	exnb++;
 #ifdef ex19
+	exname = "ft_strlcpy";
+	start_exo(exnb);
+	err = 0;
+
+	strcpy(a, "this is 10");
+	strcpy(b, "this 6");
+	init_in(in, a, b);
+	strcat(in, ", 2");
+	err += ft_test_ex(in, ft_strlcpy(a, b, 2), strlcpy(a, b, 2), exnb, exname);
+
+	strcpy(a, "this 6");
+	strcpy(b, "this is 10");
+	init_in(in, a, b);
+	strcat(in, ", 10");
+	err += ft_test_ex(in, ft_strlcpy(a, b, 10), strlcpy(a, b, 10), exnb, exname);
+
+	strcpy(a, "this 6");
+	strcpy(b, "this is 10");
+	init_in(in, a, b);
+	strcat(in, ", 15");
+	err += ft_test_ex(in, ft_strlcpy(a, b, 15), strlcpy(a, b, 15), exnb, exname);
+
+	strcpy(a, "this 6");
+	strcpy(b, "this is 10");
+	init_in(in, a, b);
+	strcat(in, ", 99");
+	err += ft_test_ex(in, ft_strlcpy(a, b, 99), strlcpy(a, b, 99), exnb, exname);
+	if (!err)
+		print_ok();
 #endif
 
 	exnb++;
 #ifdef ex20
+	exname = "ft_putnbr_base";
+	start_exo(exnb);
+	err = 0;
+	int		nb20 = 456;
+	char	base[100] = "012";
+	printf("ft_putnbr_base('%i', '%s') = ", nb20, base);
+	fflush(stdout);
+	ft_putnbr_base(nb20, base);
+	printf(" (121220 attendu)\n");
+
+	strcpy(base, "ABCD");
+	printf("ft_putnbr_base('%i', '%s') = ", nb20, base);
+	fflush(stdout);
+	ft_putnbr_base(nb20, base);
+	printf(" (BDACA attendu)\n");
+
+	strcpy(base, "abcde");
+	printf("ft_putnbr_base('%i', '%s') = ", nb20, base);
+	fflush(stdout);
+	ft_putnbr_base(nb20, base);
+	printf(" (ddbb attendu)\n");
+
+	strcpy(base, "qwerty");
+	printf("ft_putnbr_base('%i', '%s') = ", nb20, base);
+	fflush(stdout);
+	ft_putnbr_base(nb20, base);
+	printf(" (eqtq attendu)\n");
+
+	strcpy(base, "abc+e");
+	printf("ft_putnbr_base('%i', '%s') = ", nb20, base);
+	fflush(stdout);
+	ft_putnbr_base(nb20, base);
+	printf(" ('' attendu)\n");
+
+	strcpy(base, "012345678-");
+	printf("ft_putnbr_base('%i', '%s') = ", nb20, base);
+	fflush(stdout);
+	ft_putnbr_base(nb20, base);
+	printf(" ('' attendu)\n");
+
+	strcpy(base, "abcee");
+	printf("ft_putnbr_base('%i', '%s') = ", nb20, base);
+	fflush(stdout);
+	ft_putnbr_base(nb20, base);
+	printf(" ('' attendu)\n");
 #endif
 
 	exnb++;
 #ifdef ex21
+	exname = "ft_atoi_base";
+	start_exo(exnb);
+	err = 0;
+
+	strcpy(a, "1234");
+	strcpy(b, "0123456789");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_atoi_base(a, b), 1234, exnb, exname);
+
+	strcpy(a, "-2147483648");
+	strcpy(b, "0123456789");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_atoi_base(a, b), -2147483648, exnb, exname);
+
+	strcpy(a, "2147483647");
+	strcpy(b, "0123456789");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_atoi_base(a, b), 2147483647, exnb, exname);
+
+	strcpy(a, "10000");
+	strcpy(b, "01");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_atoi_base(a, b), 16, exnb, exname);
+
+	strcpy(a, "+10000");
+	strcpy(b, "01");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_atoi_base(a, b), 16, exnb, exname);
+
+	strcpy(a, "BDACA");
+	strcpy(b, "ABCD");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_atoi_base(a, b), 456, exnb, exname);
+
+	strcpy(a, "-BDACA");
+	strcpy(b, "ABCD");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_atoi_base(a, b), -456, exnb, exname);
+
+	strcpy(a, "--BDACA");
+	strcpy(b, "ABCD");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_atoi_base(a, b), 0, exnb, exname);
+
+	strcpy(a, "AAAAA");
+	strcpy(b, "A");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_atoi_base(a, b), 0, exnb, exname);
+	if (!err)
+		print_ok();
 #endif
 
 	exnb++;
 #ifdef ex22
+	start_exo(exnb);
+	strcpy(a, "Coucou\ntu vas bien ?");
+	printf("ft_putstr_non_printable('%s') = ", a);
+	fflush(stdout);
+	ft_putstr_non_printable(a);
+	printf("\n");
 #endif
 
 	exnb++;
 #ifdef ex23
+	start_exo(exnb);
+	char	str23[65] = "Salut les aminches c'est cool show mem on fait de truc terrible.";
+	ft_print_memory(str23, 80);
 #endif
 
 }

@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/06 16:01:34 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/07 09:09:08 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -233,6 +233,7 @@ int		main(void)
 	start_exo(exnb);
 	err = 0;
 	err += ft_test_ex("02147483647",ft_atoi("02147483647"),2147483647,exnb,exname);
+	err += ft_test_ex("-2147483648",ft_atoi("-2147483648"),-2147483648,exnb,exname);
 	err += ft_test_ex("a12",ft_atoi("a12"),0,exnb,exname);
 	err += ft_test_ex("\t 21u",ft_atoi("\t 21u"),21,exnb,exname);
 	err += ft_test_ex(" \v-12",ft_atoi(" \v-12"),-12,exnb,exname);

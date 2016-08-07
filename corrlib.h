@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void	ft_putchar(char c)
+void ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
@@ -38,7 +38,7 @@ int		ft_test_ex(char *in, int out, int correct, int exnb, char *exname)
 	if (out != correct)
 	{
 		doesnt_work(exnb);
-		printf("%s('%s') = %i (%i attendu)\n", exname, in, out, correct);
+		printf("%s(%s) = %i (%i attendu)\n", exname, in, out, correct);
 		return 1;
 	}
 	else
@@ -50,7 +50,7 @@ int		ft_test_ex2(char *in, char *out, char *correct, int exnb, char *exname)
 	if (strcmp(out, correct))
 	{
 		doesnt_work(exnb);
-		printf("%s('%s') = '%s' ('%s' attendu)\n", exname, in, out, correct);
+		printf("%s(%s) = '%s' ('%s' attendu)\n", exname, in, out, correct);
 		return 1;
 	}
 	else
@@ -67,7 +67,9 @@ int		ft_int_test(int a, int b)
 
 void	init_in(char *in, char *a, char *b)
 {
-	strcpy(in, a);
-	strcat(in, "' , '");
+	strcpy(in, "'");
+	strcat(in, a);
+	strcat(in, "', '");
 	strcat(in, b);
+	strcat(in, "'");
 }

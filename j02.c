@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/06 15:42:31 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/07 16:25:54 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@
 #include "ex07/ft_print_combn.c"
 #endif
 
-int		main(void)
+int		main()
 {
 	start_day(2);
 

@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/06 15:30:11 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/07 18:23:40 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,7 @@ int		main(void)
 	err += ft_test_ex("3",ft_fibonacci(3),2,exnb,exname);
 	err += ft_test_ex("4",ft_fibonacci(4),3,exnb,exname);
 	err += ft_test_ex("5",ft_fibonacci(5),5,exnb,exname);
-	/* err += ft_test_ex("46",ft_fibonacci(46),1836311903,exnb,exname); */
+	/* err += ft_test_ex("46",ft_fibonacci(46),0,exnb,exname); */
 	err += ft_test_ex("47",ft_fibonacci(47),0,exnb,exname);
 	if (!err)
 		print_ok();
@@ -151,6 +151,7 @@ int		main(void)
 	err += ft_test_ex("146",ft_sqrt(146),0,exnb,exname);
 	err += ft_test_ex("147",ft_sqrt(147),0,exnb,exname);
 	err += ft_test_ex("2147483647",ft_sqrt(2147483647),0,exnb,exname);
+	err += ft_test_ex("2077627561",ft_sqrt(2077627561),45581,exnb,exname);
 	if (!err)
 		print_ok();
 #endif
@@ -172,6 +173,10 @@ int		main(void)
 	err += ft_test_ex("147",ft_is_prime(147),0,exnb,exname);
 	err += ft_test_ex("148",ft_is_prime(148),0,exnb,exname);
 	err += ft_test_ex("149",ft_is_prime(149),1,exnb,exname);
+	err += ft_test_ex("289",ft_is_prime(289),0,exnb,exname);
+	err += ft_test_ex("361",ft_is_prime(361),0,exnb,exname);
+	err += ft_test_ex("529",ft_is_prime(529),0,exnb,exname);
+	err += ft_test_ex("961",ft_is_prime(961),0,exnb,exname);
 	if (!err)
 		print_ok();
 #endif
@@ -192,6 +197,8 @@ int		main(void)
 	err += ft_test_ex("104729",ft_find_next_prime(104730),104743,exnb,exname);
 	err += ft_test_ex("146",ft_find_next_prime(146),149,exnb,exname);
 	err += ft_test_ex("147",ft_find_next_prime(147),149,exnb,exname);
+	err += ft_test_ex("961",ft_find_next_prime(288),293,exnb,exname);
+	err += ft_test_ex("961",ft_find_next_prime(960),967,exnb,exname);
 	if (!err)
 		print_ok();
 #endif
