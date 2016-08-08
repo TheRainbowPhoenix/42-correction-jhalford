@@ -55,7 +55,7 @@ ex21/ft_atoi_base.c \
 ex22/ft_putstr_non_printable.c \
 ex23/ft_print_memory.c \
 
-EXOSj04 := ex00/ft_trdupc \
+EXOSj07 := ex00/ft_strdup.c \
 ex01/ft_range.c \
 ex02/ft_ultimate_range.c \
 ex03/ft_concat_params.c \
