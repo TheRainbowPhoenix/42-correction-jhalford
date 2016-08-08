@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/07 18:55:06 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/07 21:59:21 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -308,7 +308,8 @@ int		main(void)
 	start_exo(exnb);
 	err = 0;
 	strcpy(a, "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un");
-	err += ft_test_ex2(a, ft_strcapitalize(a), "Salut, Comment Tu Vas ? 42mots Quarante-Deux; Cinquante+Et+Un", exnb, exname);
+	strcpy(b, "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un");
+	err += ft_test_ex2(a, ft_strcapitalize(b), "Salut, Comment Tu Vas ? 42mots Quarante-Deux; Cinquante+Et+Un", exnb, exname);
 	if (!err)
 		print_ok();
 #endif
@@ -430,53 +431,53 @@ int		main(void)
 	start_exo(exnb);
 	err = 0;
 
-	strcpy(a, "this is 10");
-	strcpy(b, "this 6");
+	strcpy(a, "this is 10\0");
+	strcpy(b, "this 6\0");
 	init_in(in, a, b);
-	strcat(in, ", 2");
-	err += ft_test_ex(in, ft_strlcat(a, b, 2), strlcat(a, b, 2), exnb, exname);
+	strcat(in, ", 11");
+	err += ft_test_ex(in, ft_strlcat(a, b, 11), strlcat(a, b, 11), exnb, exname);
 
-	strcpy(a, "this 6");
-	strcpy(b, "this is 10");
+	strcpy(a, "this 6\0");
+	strcpy(b, "this is 10\0");
 	init_in(in, a, b);
-	strcat(in, ", 10");
-	err += ft_test_ex(in, ft_strlcat(a, b, 10), strlcat(a, b, 10), exnb, exname);
+	strcat(in, ", 5");
+	err += ft_test_ex(in, ft_strlcat(a, b, 5), strlcat(a, b, 5), exnb, exname);
 
-	strcpy(a, "this 6");
-	strcpy(b, "this is 10");
+	strcpy(a, "this 6\0");
+	strcpy(b, "this is 10\0");
 	init_in(in, a, b);
-	strcat(in, ", 15");
-	err += ft_test_ex(in, ft_strlcat(a, b, 15), strlcat(a, b, 15), exnb, exname);
+	strcat(in, ", 6");
+	err += ft_test_ex(in, ft_strlcat(a, b, 6), strlcat(a, b, 6), exnb, exname);
 
-	strcpy(a, "this 6");
-	strcpy(b, "this is 10");
+	strcpy(a, "this 6\0");
+	strcpy(b, "this is 10\0");
 	init_in(in, a, b);
-	strcat(in, ", 16");
-	err += ft_test_ex(in, ft_strlcat(a, b, 16), strlcat(a, b, 16), exnb, exname);
+	strcat(in, ", 7");
+	err += ft_test_ex(in, ft_strlcat(a, b, 7), strlcat(a, b, 7), exnb, exname);
 
-	strcpy(a, "this 6");
-	strcpy(b, "this is 10");
+	strcpy(a, "this 6\0");
+	strcpy(b, "this is 10\0");
+	init_in(in, a, b);
+	strcat(in, ", 8");
+	err += ft_test_ex(in, ft_strlcat(a, b, 8), strlcat(a, b, 8), exnb, exname);
+
+	strcpy(a, "this 6\0");
+	strcpy(b, "this is 10\0");
 	init_in(in, a, b);
 	strcat(in, ", 17");
 	err += ft_test_ex(in, ft_strlcat(a, b, 17), strlcat(a, b, 17), exnb, exname);
 
-	strcpy(a, "this 6");
-	strcpy(b, "this is 10");
+	strcpy(a, "this 6\0");
+	strcpy(b, "this is 10\0");
 	init_in(in, a, b);
-	strcat(in, ", 99");
-	err += ft_test_ex(in, ft_strlcat(a, b, 99), strlcat(a, b, 99), exnb, exname);
+	strcat(in, ", 18");
+	err += ft_test_ex(in, ft_strlcat(a, b, 18), strlcat(a, b, 18), exnb, exname);
 
-	strcpy(a, "this 6");
-	strcpy(b, "this 10");
+	strcpy(a, "this 6\0");
+	strcpy(b, "this is 10\0");
 	init_in(in, a, b);
-	strcat(in, ", 2");
-
-	strcpy(a, "this is 10");
-	strcpy(b, "this 6");
-	init_in(in, a, b);
-	strcat(in, ", 10");
-	err += ft_test_ex(in, ft_strlcat(a, b, 10), strlcat(a, b, 10), exnb, exname);
-	err += ft_test_ex(in, ft_strlcat(a, b, 10), strlcat(a, b, 10), exnb, exname);
+	strcat(in, ", 9");
+	err += ft_test_ex(in, ft_strlcat(a, b, 9), strlcat(a, b, 9), exnb, exname);
 	if (!err)
 		print_ok();
 #endif

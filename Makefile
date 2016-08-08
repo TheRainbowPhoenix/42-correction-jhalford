@@ -55,6 +55,15 @@ ex21/ft_atoi_base.c \
 ex22/ft_putstr_non_printable.c \
 ex23/ft_print_memory.c \
 
+EXOSj04 := ex00/ft_trdupc \
+ex01/ft_range.c \
+ex02/ft_ultimate_range.c \
+ex03/ft_concat_params.c \
+ex04/ft_split_whitespaces.c \
+ex05/ft_print_words_table.c \
+ex06/ft_convert_base.c \
+ex07/ft_split.c \
+
 .PHONY: j02 j03 j04 j05 j06 j07 default
 
 default:
@@ -74,3 +83,6 @@ j05:
 
 j06:
 	@echo "Pas de suite de tests prévue pour le jour 06 !"
+
+j07:
+	gcc $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj07), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
