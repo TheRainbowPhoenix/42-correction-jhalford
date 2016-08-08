@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/07 18:23:40 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/08 12:51:24 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int		main(void)
 {
 	int		err = 0;
 	char	*exname;
-	int		exnb;
+	int		exnb = 0;;
 
 	start_day(4);
 #ifdef ex00
@@ -67,9 +67,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex01
 	exname = "ft_recursive_factorial";
-	exnb = 1;
 	start_exo(exnb);
 	err = 0;
 	err += ft_test_ex("0",ft_recursive_factorial(0),1,exnb,exname);
@@ -84,9 +84,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex02
 	exname = "ft_iterative_power";
-	exnb = 2;
 	start_exo(exnb);
 	err = 0;
 	err += ft_test_ex("0,0",ft_iterative_power(0,0),1,exnb,exname);
@@ -101,9 +101,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex03
 	exname = "ft_recursive_power";
-	exnb = 3;
 	start_exo(exnb);
 	err = 0;
 	err += ft_test_ex("0,0",ft_recursive_power(0,0),1,exnb,exname);
@@ -118,9 +118,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex04
 	exname = "ft_fibonacci";
-	exnb = 4;
 	start_exo(exnb);
 	err = 0;
 	err += ft_test_ex("-1",ft_fibonacci(-1),-1,exnb,exname);
@@ -136,9 +136,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex05
 	exname = "ft_sqrt";
-	exnb = 5;
 	start_exo(exnb);
 	err = 0;
 	err += ft_test_ex("-4",ft_sqrt(-4),0,exnb,exname);
@@ -156,9 +156,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex06
 	exname = "ft_is_prime";
-	exnb = 6;
 	start_exo(exnb);
 	err = 0;
 	err += ft_test_ex("-42",ft_is_prime(-42),0,exnb,exname);
@@ -181,9 +181,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex07
 	exname = "ft_find_next_prime";
-	exnb = 7;
 	start_exo(exnb);
 	err = 0;
 	err += ft_test_ex("-42",ft_find_next_prime(-42),2,exnb,exname);
@@ -203,9 +203,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex08
-	exname = "ft_find_next_prime";
-	exnb = 8;
+	exname = "ft_eight_queens_puzzle";
 	start_exo(exnb);
 	err = 0;
 	err += ft_test_ex("",ft_eight_queens_puzzle(),92,exnb,exname);
@@ -213,8 +213,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex09
-	exnb = 9;
+	exname = "ft_eight_queens_puzzle2";
 	start_exo(exnb);
 	ft_eight_queens_puzzle_2();
 #endif
