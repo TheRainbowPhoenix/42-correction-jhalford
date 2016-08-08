@@ -23,4 +23,4 @@ copier/coller dans votre terminal:
 |  02  | 7/7 |
 |  03  | 9/9 (sauf ex01) |
 |  04  | 9/9 |
-|  05  | 5/23|
+|  05  | 23/23|
