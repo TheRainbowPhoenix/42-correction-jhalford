@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/08 21:49:54 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/09 17:50:04 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -582,6 +582,21 @@ int		main(void)
 	start_exo(exnb);
 	err = 0;
 
+	strcpy(a, "++2a");
+	strcpy(b, "0123456789ABCDEF");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_atoi_base(a, b), 0, exnb, exname);
+
+	strcpy(a, "2-a");
+	strcpy(b, "0123456789ABCDEF");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_atoi_base(a, b), 0, exnb, exname);
+
+	strcpy(a, "2a");
+	strcpy(b, "0123456789ABCDEF");
+	init_in(in, a, b);
+	err += ft_test_ex(in, ft_atoi_base(a, b), 0, exnb, exname);
+
 	strcpy(a, "1234");
 	strcpy(b, "0123456789");
 	init_in(in, a, b);
@@ -633,18 +648,19 @@ int		main(void)
 	exnb++;
 #ifdef ex22
 	start_exo(exnb);
-	strcpy(a, "Coucou\ntu vas bien ?");
+	strcpy(a, "Coucou\ntu\x15vas\x7F bien ?");
 	printf("ft_putstr_non_printable('%s') = ", a);
 	fflush(stdout);
 	ft_putstr_non_printable(a);
+	printf("\n(il devrait y avoir \\0a,\\15 et \\7f qui apparaissent dans la sortie ...)\n");
 	printf("\n");
 #endif
 
 	exnb++;
 #ifdef ex23
 	start_exo(exnb);
-	char	str23[65] = "Salut les aminches c'est cool show mem on fait de truc terrible.";
-	ft_print_memory(str23, 80);
+	char	str23[500] = "Salut les aminches c'est cool show mem on fait de truc terrible.\x2e\x0\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0e\x0f\x1b\x7f";
+	ft_print_memory(str23, 70);
 #endif
 
 }
