@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/07 21:59:21 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/08 21:49:54 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -522,31 +522,43 @@ int		main(void)
 	err = 0;
 	int		nb20 = 456;
 	char	base[100] = "012";
-	printf("ft_putnbr_base('%i', '%s') = ", nb20, base);
+	int		min_int = -2147483648; 
+	printf("ft_putnbr_base(%i, '%s') = ", min_int, "0123456789");
+	fflush(stdout);
+	ft_putnbr_base(min_int, "0123456789");
+	printf(" (-2147483648 attendu)\n");
+
+	printf("ft_putnbr_base(%i, '%s') = ", nb20, base);
 	fflush(stdout);
 	ft_putnbr_base(nb20, base);
 	printf(" (121220 attendu)\n");
 
 	strcpy(base, "ABCD");
-	printf("ft_putnbr_base('%i', '%s') = ", nb20, base);
+	printf("ft_putnbr_base(%i, '%s') = ", -nb20, base);
+	fflush(stdout);
+	ft_putnbr_base(-nb20, base);
+	printf(" (-BDACA attendu)\n");
+
+	strcpy(base, "ABCD");
+	printf("ft_putnbr_base(%i, '%s') = ", nb20, base);
 	fflush(stdout);
 	ft_putnbr_base(nb20, base);
 	printf(" (BDACA attendu)\n");
 
 	strcpy(base, "abcde");
-	printf("ft_putnbr_base('%i', '%s') = ", nb20, base);
+	printf("ft_putnbr_base(%i, '%s') = ", nb20, base);
 	fflush(stdout);
 	ft_putnbr_base(nb20, base);
 	printf(" (ddbb attendu)\n");
 
 	strcpy(base, "qwerty");
-	printf("ft_putnbr_base('%i', '%s') = ", nb20, base);
+	printf("ft_putnbr_base(%i, '%s') = ", nb20, base);
 	fflush(stdout);
 	ft_putnbr_base(nb20, base);
 	printf(" (eqtq attendu)\n");
 
 	strcpy(base, "abc+e");
-	printf("ft_putnbr_base('%i', '%s') = ", nb20, base);
+	printf("ft_putnbr_base(%i, '%s') = ", nb20, base);
 	fflush(stdout);
 	ft_putnbr_base(nb20, base);
 	printf(" ('' attendu)\n");
