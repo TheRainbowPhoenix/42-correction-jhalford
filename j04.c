@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/08 12:51:24 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/09 15:01:47 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,11 +194,11 @@ exnb++;
 	err += ft_test_ex("4",ft_find_next_prime(4),5,exnb,exname);
 	err += ft_test_ex("17",ft_find_next_prime(17),17,exnb,exname);
 	err += ft_test_ex("104729",ft_find_next_prime(104729),104729,exnb,exname);
-	err += ft_test_ex("104729",ft_find_next_prime(104730),104743,exnb,exname);
+	err += ft_test_ex("104730",ft_find_next_prime(104730),104743,exnb,exname);
 	err += ft_test_ex("146",ft_find_next_prime(146),149,exnb,exname);
 	err += ft_test_ex("147",ft_find_next_prime(147),149,exnb,exname);
-	err += ft_test_ex("961",ft_find_next_prime(288),293,exnb,exname);
-	err += ft_test_ex("961",ft_find_next_prime(960),967,exnb,exname);
+	err += ft_test_ex("288",ft_find_next_prime(288),293,exnb,exname);
+	err += ft_test_ex("960",ft_find_next_prime(960),967,exnb,exname);
 	if (!err)
 		print_ok();
 #endif
