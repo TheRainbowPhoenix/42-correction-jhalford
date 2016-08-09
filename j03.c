@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/07 09:09:08 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/09 14:13:00 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,11 @@ int		main(void)
 {
 	int		err = 0;
 	char	*exname;
-	int		exnb;
+	int		exnb = 0;
 	start_day(2);
 
 #ifdef ex00
-	start_exo(0);
+	start_exo(exnb);
 	int	nbr;
 	nbr = 30;
 	ft_ft(&nbr);
@@ -72,8 +72,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 	/* #ifdef ex01 */
-	/* start_exo(1); */
+	/* start_exo(exnb); */
 	/* err = 0; */
 	/* int	********nbr1; */
 	/* ********nbr1 = 10; */
@@ -91,8 +92,9 @@ int		main(void)
 	/* 	print_ok(); */
 	/* #endif */
 
+exnb++;
 #ifdef ex02
-	start_exo(2);
+	start_exo(exnb);
 	err = 0;
 
 	int	a = 10;
@@ -113,8 +115,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex03
-	start_exo(3);
+	start_exo(exnb);
 	err = 0;
 
 	int a3 = 27;
@@ -138,8 +141,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex04
-	start_exo(4);
+	start_exo(exnb);
 	err = 0;
 
 	int a4 = 27;
@@ -162,23 +166,25 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex05
-	start_exo(5);
+	start_exo(exnb);
 
 	char str5[100] = "voila une chaine";
 	printf("ft_putstr(%s): ", str5);
 	fflush(stdout);
 	ft_putstr(str5);
 	printf("\n");
-	strcpy(str5, "test");
+	strcpy(str5, "[ test { )");
 	printf("ft_putstr(%s): ", str5);
 	fflush(stdout);
 	ft_putstr(str5);
 	printf("\n");
 #endif
 
+exnb++;
 #ifdef ex06
-	start_exo(6);
+	start_exo(exnb);
 	err = 0;
 
 	char str6[100] = "0123456789";
@@ -209,8 +215,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex07
-	start_exo(7);
+	start_exo(exnb);
 	err = 0;
 
 	char *in7 = "test";
@@ -227,9 +234,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex08
 	exname = "ft_atoi";
-	exnb = 8;
 	start_exo(exnb);
 	err = 0;
 	err += ft_test_ex("02147483647",ft_atoi("02147483647"),2147483647,exnb,exname);
@@ -245,8 +252,9 @@ int		main(void)
 		print_ok();
 #endif
 
+exnb++;
 #ifdef ex09
-	exnb = 9;
+	exname = "ft_sort_list";
 	start_exo(exnb);
 	int i9 = 0;
 	int in9[10] = {4356,4357,0,10,-10,14,13,12,-100,-247};
