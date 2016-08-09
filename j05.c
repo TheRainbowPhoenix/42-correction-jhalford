@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/09 17:50:04 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/09 17:51:49 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -434,50 +434,14 @@ int		main(void)
 	strcpy(a, "this is 10\0");
 	strcpy(b, "this 6\0");
 	init_in(in, a, b);
-	strcat(in, ", 11");
-	err += ft_test_ex(in, ft_strlcat(a, b, 11), strlcat(a, b, 11), exnb, exname);
+	strcat(in, ", 10");
+	err += ft_test_ex(in, ft_strlcat(a, b, 10), strlcat(a, b, 10), exnb, exname);
 
 	strcpy(a, "this 6\0");
 	strcpy(b, "this is 10\0");
 	init_in(in, a, b);
 	strcat(in, ", 5");
 	err += ft_test_ex(in, ft_strlcat(a, b, 5), strlcat(a, b, 5), exnb, exname);
-
-	strcpy(a, "this 6\0");
-	strcpy(b, "this is 10\0");
-	init_in(in, a, b);
-	strcat(in, ", 6");
-	err += ft_test_ex(in, ft_strlcat(a, b, 6), strlcat(a, b, 6), exnb, exname);
-
-	strcpy(a, "this 6\0");
-	strcpy(b, "this is 10\0");
-	init_in(in, a, b);
-	strcat(in, ", 7");
-	err += ft_test_ex(in, ft_strlcat(a, b, 7), strlcat(a, b, 7), exnb, exname);
-
-	strcpy(a, "this 6\0");
-	strcpy(b, "this is 10\0");
-	init_in(in, a, b);
-	strcat(in, ", 8");
-	err += ft_test_ex(in, ft_strlcat(a, b, 8), strlcat(a, b, 8), exnb, exname);
-
-	strcpy(a, "this 6\0");
-	strcpy(b, "this is 10\0");
-	init_in(in, a, b);
-	strcat(in, ", 17");
-	err += ft_test_ex(in, ft_strlcat(a, b, 17), strlcat(a, b, 17), exnb, exname);
-
-	strcpy(a, "this 6\0");
-	strcpy(b, "this is 10\0");
-	init_in(in, a, b);
-	strcat(in, ", 18");
-	err += ft_test_ex(in, ft_strlcat(a, b, 18), strlcat(a, b, 18), exnb, exname);
-
-	strcpy(a, "this 6\0");
-	strcpy(b, "this is 10\0");
-	init_in(in, a, b);
-	strcat(in, ", 9");
-	err += ft_test_ex(in, ft_strlcat(a, b, 9), strlcat(a, b, 9), exnb, exname);
 	if (!err)
 		print_ok();
 #endif
