@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/09 15:01:47 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/10 16:04:18 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,7 +131,7 @@ exnb++;
 	err += ft_test_ex("4",ft_fibonacci(4),3,exnb,exname);
 	err += ft_test_ex("5",ft_fibonacci(5),5,exnb,exname);
 	/* err += ft_test_ex("46",ft_fibonacci(46),0,exnb,exname); */
-	err += ft_test_ex("47",ft_fibonacci(47),0,exnb,exname);
+	/* err += ft_test_ex("47",ft_fibonacci(47),0,exnb,exname); */
 	if (!err)
 		print_ok();
 #endif
