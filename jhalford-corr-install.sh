@@ -21,7 +21,8 @@ jhalford-corr () {
 	else
 		make $1
 	fi
-	if [ ! "$PWD" = ~/42-correction-jhalford/ ]; then
-		rm $1.c Makefile corrlib.h a.out
+	if [ $PWD != $HOME"/42-correction-jhalford" ]; then
+		rm $1.c Makefile corrlib.h
 	fi
+	rm a.out
 }
