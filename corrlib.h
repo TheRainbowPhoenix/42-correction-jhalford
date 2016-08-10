@@ -57,6 +57,27 @@ int		ft_test_ex2(char *in, char *out, char *correct, int exnb, char *exname)
 		return 0;
 }
 
+/* int		ft_test_ex3(char *in, int *out, int *correct, int exnb, char *exname) */
+/* { */
+/* 	int	err = 0; */
+/* 	while (*correct) */
+/* 	{ */
+/* 		err += (*correct != *out); */
+/* 		out++; */
+/* 		correct++; */
+/* 	} */
+/* 	if (err) */
+/* 	{ */
+/* 		doesnt_work(exnb); */
+/* 		printf("%s(%s) = {", exname, in); */
+/* 		fflush(stdout); */
+/* 		printf(" attendu)\n", exname, in, out, correct); */
+/* 		return 1; */
+/* 	} */
+/* 	else */
+/* 		return 0; */
+/* } */
+
 int		ft_int_test(int a, int b)
 {
 	if (a == b)
