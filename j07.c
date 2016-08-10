@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/08 09:43:03 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/10 15:47:30 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/10 15:48:26 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int		main(void)
 	char	b[100];
 	char	in[100];
 
-	start_day(5);
+	start_day(7);
 #ifdef ex00
 	exname = "ft_strdup";
 	start_exo(exnb);
