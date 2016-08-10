@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/08 09:43:03 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/10 19:59:05 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/10 20:00:07 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,15 @@ int		main(void)
 		printf("%i, ", *tab02++);
 	fflush(stdout);
 	printf("} ({} attendu)\n");
+
+	ft_ultimate_range(&tab02, -3, 4);
+	printf("ft_range(-3,2) = {");
+	fflush(stdout);
+	int i01 = 0;
+	while (i01 < 7)
+		printf("%i,", tab02[i01++]);
+	fflush(stdout);
+	printf("} ({-3,-2,-1,0,1,2,3} attendu)\n");
 #endif
 
 	exnb++;
