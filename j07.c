@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/08 09:43:03 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/10 15:48:26 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/10 19:59:05 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,13 +67,12 @@ int		main(void)
 	int	*tab1 = ft_range(13,15);
 	printf("ft_range(13,15) = {");
 	fflush(stdout);
-	if (tab1)
-		while (*tab1)
-			printf("%i, ", *tab1++);
+	while (*tab1)
+		printf("%i, ", *tab1++);
 	fflush(stdout);
 	printf("} ({13,14,} attendu)\n");
 
-	int	*tab1_2 = ft_range(16,15);
+	int	*tab1_2 = ft_range(9,9);
 	printf("ft_range(16,15) = {");
 	fflush(stdout);
 	if (tab1_2)
@@ -82,6 +81,15 @@ int		main(void)
 	fflush(stdout);
 	printf("} ({} attendu)\n");
 	fflush(stdout);
+
+	int	*tab1_1 = ft_range(-3,4);
+	printf("ft_range(-3,2) = {");
+	fflush(stdout);
+	int i01 = 0;
+	while (i01 < 7)
+		printf("%i,", tab1_1[i01++]);
+	fflush(stdout);
+	printf("} ({-3,-2,-1,0,1,2,3} attendu)\n");
 #endif
 
 	exnb++;
