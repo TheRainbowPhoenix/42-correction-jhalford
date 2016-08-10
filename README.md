@@ -24,3 +24,5 @@ copier/coller dans votre terminal:
 |  03  | 9/9 (sauf ex01) |
 |  04  | 9/9 |
 |  05  | 23/23|
+|  06  | pas de tests |
+|  07  | 2/7 |
