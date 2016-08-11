@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/09 14:13:00 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/11 15:26:39 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,14 @@
 
 int		main(void)
 {
-	int		err = 0;
+	int		err;
 	char	*exname;
-	int		exnb = 0;
+	int		exnb;
 	start_day(2);
 
+	err = 0;
+	exnb = 0;
+	exname = "test";
 #ifdef ex00
 	start_exo(exnb);
 	int	nbr;

@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/09 19:59:39 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/11 15:25:52 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,16 +87,20 @@
 
 int		main(void)
 {
-	int		err = 0;
+	int		err;
 	char	*exname;
-	int		exnb;
+	int		exnb = 0;
 	char	a[100];
 	char	b[100];
 	char	in[100];
 
+	strcpy(a, "test");
+	strcpy(b, "test");
+	strcpy(in, "test");
+	err = 0;
 	start_day(5);
+	exname = "test";
 #ifdef ex00
-	exnb = 0;
 	start_exo(exnb);
 
 	char str5[100] = "voila une chaine";
