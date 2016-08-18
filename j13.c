@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/08 09:43:03 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/18 16:04:22 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/18 18:49:30 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,48 +69,10 @@ int		main(void)
 
 	exnb++;
 #ifdef ex02
-	exname = "ft_ultimate_range";
-	start_exo(exnb);
-	int	*tab02;
-	ft_ultimate_range(&tab02, 13, 16);
-	printf("ft_range(13,16) = {");
-	fflush(stdout);
-	while (*tab02)
-		printf("%i,", *tab02++);
-	fflush(stdout);
-	printf("} ({13,14,15,} attendu)\n");
-
-	ft_ultimate_range(&tab02, 16, 15);
-	printf("ft_range(16,15) = {");
-	fflush(stdout);
-	if (tab02)
-		while (*tab02)
-			printf("%i, ", *tab02++);
-	fflush(stdout);
-	printf("} ({} attendu)\n");
-
-	ft_ultimate_range(&tab02, -3, 4);
-	printf("ft_range(-3,2) = {");
-	fflush(stdout);
-	int i01 = 0;
-	while (i01 < 7)
-		printf("%i,", tab02[i01++]);
-	fflush(stdout);
-	printf("} ({-3,-2,-1,0,1,2,3} attendu)\n");
 #endif
 
 	exnb++;
 #ifdef ex03 
-	/* exname = "ft_concat_params"; */
-	/* char tab03[3][10]; */
-	/* i = 1; */
-	/* while (i < 3) */
-	/* 	strcpy(tab03[i], "test1"); */
-	/* 	strcat(a, tab03[i]); */
-	/* printf("yes\n"); */
-	/* err += ft_test_ex2("{'test1', '42', 'lol3'}", ft_concat_params(3, tab03), a, exnb, exname); */
-	/* if (!err) */
-	/* 	print_ok(); */
 #endif
 
 	exnb++;
