@@ -1,3 +1,4 @@
+PATH_jhalford=~/42-correction-jhalford
 FLAGS = -Wall -Wextra -Werror
 EXOSj02 := ex00/ft_print_alphabet.c \
 ex01/ft_print_reverse_alphabet.c \
@@ -64,25 +65,47 @@ ex05/ft_print_words_table.c \
 ex06/ft_convert_base.c \
 ex07/ft_split.c \
 
-.PHONY: j02 j03 j04 j05 j06 j07 default
+EXOSj11 := ex00/ft_create_elem.c \
+ex01/ft_list_push_back.c \
+ex02/ft_list_push_front.c \
+ex03/ft_list_size.c \
+ex04/ft_list_last.c \
+ex05/ft_list_push_params.c \
+ex06/ft_list_clear.c \
+ex07/ft_list_at.c \
+ex08/ft_list_reverse.c \
+ex09/ft_list_foreach.c \
+ex10/ft_list_foreach_if.c \
+ex11/ft_list_find.c \
+ex12/ft_list_remvoe_if.c \
+ex13/ft_list_merge.c \
+ex14/ft_list_sort.c \
+ex15/ft_list_reverse_fun.c \
+ex16/ft_sorted_list_insert.c \
+ex17/ft_sorted_list_merge.c \
+
+.PHONY: j02 j03 j04 j05 j06 j07 j11 default
 
 default:
 	@echo "il faut specifier le jour"
 
 j02:
-	gcc $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj02), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
+	gcc -I $(PATH_jhalford) $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj02), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
 
 j03:
-	gcc $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj03), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
+	gcc -I $(PATH_jhalford) $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj03), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
 
 j04:
-	gcc $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj04), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
+	gcc -I $(PATH_jhalford) $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj04), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
 
 j05:
-	gcc $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj05), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
+	gcc -I $(PATH_jhalford) $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj05), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
 
 j06:
 	@echo "Pas de suite de tests prévue pour le jour 06 !"
 
 j07:
-	gcc $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj07), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
+	gcc -I $(PATH_jhalford) $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj07), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
+
+j11:
+	gcc -I $(PATH_jhalford) $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj11), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out

@@ -1,11 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   corrlib.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/08/18 16:05:29 by jhalford          #+#    #+#             */
+/*   Updated: 2016/08/18 18:13:48 by jhalford         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef CORRLIB_H
+#define CORRLIB_H
 #include <unistd.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
+}
+
+int		ft_strlen(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+void	ft_putstr(void *str)
+{
+	write(1, (char *)str, ft_strlen((char *)str));
 }
 
 void	start_day(int num)
@@ -57,27 +86,6 @@ int		ft_test_ex2(char *in, char *out, char *correct, int exnb, char *exname)
 		return 0;
 }
 
-/* int		ft_test_ex3(char *in, int *out, int *correct, int exnb, char *exname) */
-/* { */
-/* 	int	err = 0; */
-/* 	while (*correct) */
-/* 	{ */
-/* 		err += (*correct != *out); */
-/* 		out++; */
-/* 		correct++; */
-/* 	} */
-/* 	if (err) */
-/* 	{ */
-/* 		doesnt_work(exnb); */
-/* 		printf("%s(%s) = {", exname, in); */
-/* 		fflush(stdout); */
-/* 		printf(" attendu)\n", exname, in, out, correct); */
-/* 		return 1; */
-/* 	} */
-/* 	else */
-/* 		return 0; */
-/* } */
-
 int		ft_int_test(int a, int b)
 {
 	if (a == b)
@@ -94,3 +102,4 @@ void	init_in(char *in, char *a, char *b)
 	strcat(in, b);
 	strcat(in, "'");
 }
+#endif
