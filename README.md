@@ -36,4 +36,5 @@ Ce projet est le fruit d'un effort collectif pour la piscine d'août 2016 à 42 
   - mcartier
   - fdrias
   - abarriel
+  -	elacaill
   - tous ceux que j'ai oubliés
