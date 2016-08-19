@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 15:56:47 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/19 12:42:24 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/19 15:55:04 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ int		main(void)
 #ifdef ex01
 	exname = "ft_list_push_back";
 	start_exo(exnb);
+	ft_warning1();
 	link = NULL;
 	ft_list_push_back(&link, "A");
 	ft_list_push_back(&link, "B");
@@ -112,6 +113,7 @@ int		main(void)
 #ifdef ex02
 	exname = "ft_list_push_front";
 	start_exo(exnb);
+	ft_warning1();
 	link = NULL;
 	ft_list_push_front(&link, "C");
 	ft_list_push_front(&link, "B");
@@ -125,6 +127,7 @@ int		main(void)
 #ifdef ex03
 	start_exo(exnb);
 	exname = "ft_list_size";
+	ft_warning1();
 	printf("list : ");
 	ft_print_list(base);
 	printf("%s = %i\n", exname, ft_list_size(base));
@@ -137,6 +140,7 @@ int		main(void)
 #ifdef ex04
 	start_exo(exnb);
 	exname = "ft_list_last";
+	ft_warning1();
 
 	printf("list : ");
 	ft_print_list(base);
@@ -176,6 +180,7 @@ int		main(void)
 #ifdef ex07
 	start_exo(exnb);
 	exname = "ft_list_at";
+	ft_warning1();
 
 	printf("list : ");
 	ft_print_list(base);
@@ -274,6 +279,7 @@ t_list	*list2;
 #ifdef ex13
 	start_exo(exnb);
 	exname = "ft_list_merge";
+	ft_warning1();
 
 	list1 = NULL;
 	list2 = NULL;
@@ -338,6 +344,7 @@ t_list	*list2;
 	start_exo(exnb);
 	exname = "ft_list_sort";
 	printf("%s\n", exname);
+	ft_warning1();
 
 	base = NULL;
 	printf("avant : ");
@@ -401,6 +408,7 @@ t_list	*list2;
 	start_exo(exnb);
 	exname = "ft_sorted_list_insert";
 	printf("%s\n", exname);
+	ft_warning1();
 
 	base = ft_create_elem("2");
 	base->next = ft_create_elem("3");
@@ -429,6 +437,7 @@ t_list	*list2;
 	start_exo(exnb);
 	exname = "ft_sorted_list_merge";
 	printf("%s\n", exname);
+	ft_warning1();
 
 	list1 = NULL;
 	list2 = NULL;

@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 15:53:57 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/18 17:13:13 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/19 15:56:22 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ void	ft_print_list(t_list *list)
 		list = list->next;
 	}
 	printf("NULL\n");
+}
+
+void	ft_warning1()
+{
+	printf("Attention à traiter le cas de où *begin_list = NULL (la moulinette le teste!).\n");
 }
 
 #ifndef ex00
