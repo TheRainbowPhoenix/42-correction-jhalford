@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 16:05:29 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/18 18:13:48 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/19 14:04:10 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ int		ft_strlen(char *str)
 void	ft_putstr(void *str)
 {
 	write(1, (char *)str, ft_strlen((char *)str));
+}
+
+void	ft_put1char(void *str)
+{
+	write(1, str, 1);
 }
 
 void	start_day(int num)

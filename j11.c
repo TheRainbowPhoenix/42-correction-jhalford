@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 15:56:47 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/18 18:45:22 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/19 12:42:24 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ int		main(void)
 #endif
 
 	exnb++;
-#ifdef ex03 
+#ifdef ex03
 	start_exo(exnb);
 	exname = "ft_list_size";
 	printf("list : ");
