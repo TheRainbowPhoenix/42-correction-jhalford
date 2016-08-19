@@ -24,5 +24,16 @@ copier/coller dans votre terminal:
 |  03  | 9/9 (sauf ex01) |
 |  04  | 9/9 |
 |  05  | 23/23|
-|  06  | pas de tests |
 |  07  | 2/7 |
+|  11  | 17/17 |
+|  13  | 7/9 |
+
+# Remerciements
+Ce projet est le fruit d'un effort collectif pour la piscine d'août 2016 à 42 Paris:
+
+  - nboute
+  - wescande
+  - mcartier
+  - fdrias
+  - abarriel
+  - tous ceux que j'ai oubliés
