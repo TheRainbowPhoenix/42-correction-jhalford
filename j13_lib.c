@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 15:05:48 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/19 15:51:31 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/19 16:09:41 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int		my_strcmp(void *s1, void *s2)
 
 void	ft_print_fence(int level)
 {
+	level = 0;
 	ft_putchar('\n');
 	/* if (level == 0) */
 	/* 	ft_putstr("   "); */

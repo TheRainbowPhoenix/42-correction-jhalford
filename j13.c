@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/08 09:43:03 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/19 15:18:41 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/19 16:09:40 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@
 
 int		main(void)
 {
-	int		err = 0;
 	char	*exname;
 	int		exnb = 0;
 	t_btree	*root;
@@ -103,6 +102,7 @@ int		main(void)
 
 	exnb++;
 #ifdef ex04
+	start_exo(exnb);
 	root = NULL;
 	printf("avant:\n");
 	bst_print_ascii(root, stdout);
@@ -119,6 +119,7 @@ int		main(void)
 
 	exnb++;
 #ifdef ex05
+	start_exo(exnb);
 	bst_print_ascii(root, stdout);
 	exname = "btree_search_item";
 	printf("%s = %s (expected 1)\n", exname, btree_search_item(root, "1", &my_strcmp));
@@ -128,6 +129,7 @@ int		main(void)
 
 	exnb++;
 #ifdef ex06
+	start_exo(exnb);
 	exname = "btree_level_count";
 	bst_print_ascii(root, stdout);
 	printf("%s = %i (expected 3)\n", exname, btree_level_count(root));
@@ -138,11 +140,21 @@ int		main(void)
 
 	root = btree_create_node("2");
 	bst_print_ascii(root, stdout);
-	printf("%s = %i (expected 0)\n", exname, btree_level_count(root));
+	printf("%s = %i (expected 1)\n", exname, btree_level_count(root));
 #endif
 
 	exnb++;
 #ifdef ex07
+	start_exo(exnb);
+
+	root = btree_create_node("2");
+	root->left = btree_create_node("1");
+	root->left->left = btree_create_node("0");
+	root->left->right = btree_create_node("1");
+	root->right = btree_create_node("4");
+	root->right->left = btree_create_node("3");
+	root->right->right = btree_create_node("5");
+
 	bst_print_ascii(root, stdout);
 	btree_apply_by_level(root, &ft_print_btree3);
 #endif

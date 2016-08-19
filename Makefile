@@ -84,7 +84,18 @@ ex15/ft_list_reverse_fun.c \
 ex16/ft_sorted_list_insert.c \
 ex17/ft_sorted_list_merge.c \
 
-.PHONY: j02 j03 j04 j05 j06 j07 j11 default
+EXOSj13 := ex00/btree_create_node.c \
+ex01/btree_apply_prefix.c \
+ex02/btree_apply_infix.c \
+ex03/btree_apply_suffix.c \
+ex04/btree_insert_data.c \
+ex05/btree_search_item.c \
+ex06/btree_level_count.c \
+ex07/btree_apply_by_level.c \
+ex08/rb_insert.c \
+ex09/rb_remove.c \
+
+.PHONY: j02 j03 j04 j05 j07 j11 j13 default
 
 default:
 	@echo "il faut specifier le jour"
@@ -101,11 +112,11 @@ j04:
 j05:
 	gcc -I $(PATH_jhalford) $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj05), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
 
-j06:
-	@echo "Pas de suite de tests prévue pour le jour 06 !"
-
 j07:
 	gcc -I $(PATH_jhalford) $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj07), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
 
 j11:
 	gcc -I $(PATH_jhalford) $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj11), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
+
+j13:
+	gcc -I $(PATH_jhalford) $(FLAGS) $@.c -D $@ $(foreach EX_PATH, $(EXOSj13), $(if $(wildcard $(EX_PATH)), -D $(subst /,,$(dir $(EX_PATH))))) && ./a.out
