@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/02 23:29:00 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/10 16:04:18 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/20 11:17:30 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int		main(void)
 	char	*exname;
 	int		exnb = 0;;
 
+	err = 0;
+	exname = "test";
 	start_day(4);
 #ifdef ex00
 	exname = "ft_iterative_factorial";
