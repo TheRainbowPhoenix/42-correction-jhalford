@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 15:56:47 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/20 15:11:33 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/20 15:12:34 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -238,7 +238,7 @@ int		main(void)
 	ft_print_list(base);
 	printf("%s(list, &ft_putstr, '012', &strcmp) = ", exname);
 	fflush(stdout);
-	ft_list_foreach_if(base, &ft_putstr, "012", &strcmp);
+	ft_list_foreach_if(base, &corr_ft_putstr, "012", &strcmp);
 	printf(" (012 attendu)");
 #endif
 
