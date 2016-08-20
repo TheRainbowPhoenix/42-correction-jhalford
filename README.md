@@ -29,13 +29,14 @@ copier/coller dans votre terminal:
 |  13  | 7/9 |
 
 # Remerciements
-Ce projet est le fruit d'un effort collectif pour la piscine d'août 2016 à 42 Paris:
+Ce projet est le fruit d'un effort collectif pour la piscine d'août 2016 à 42 Paris, par ordre alphabétique:
 
-  - nboute
-  - wescande
-  - mcartier
-  - fdrias
   - abarriel
   -	elacaill
+  - fdrias
   - joberg
-  - tous ceux que j'ai oubliés
+  - jboulang
+  - mcartier
+  - nboute
+  - wescande
+  - tous ceux que j'ai oublié
