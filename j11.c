@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 15:56:47 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/19 15:55:04 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/20 15:11:33 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -226,7 +226,7 @@ int		main(void)
 	ft_print_list(base);
 	printf("%s : ", exname);
 	fflush(stdout);
-	ft_list_foreach(base, &ft_putstr);
+	ft_list_foreach(base, &corr_ft_putstr);
 #endif
 
 	exnb++;
