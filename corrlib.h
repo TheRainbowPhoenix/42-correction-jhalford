@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 16:05:29 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/20 11:12:00 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/20 11:15:06 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		corr_ft_strlen(char *str)
 	return (i);
 }
 
-void	ft_putstr(void *str)
+void	corr_ft_putstr(void *str)
 {
 	write(1, (char *)str, corr_ft_strlen((char *)str));
 }

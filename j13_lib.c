@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 15:05:48 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/19 16:09:41 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/20 11:15:31 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,16 +59,16 @@ void	ft_print_fence(int level)
 	level = 0;
 	ft_putchar('\n');
 	/* if (level == 0) */
-	/* 	ft_putstr("   "); */
+	/* 	corr_ft_putstr("   "); */
 	/* if (level == 1) */
 	/* { */
-	/* 	ft_putstr("  /\\"); */
-	/* 	ft_putstr("\n "); */
+	/* 	corr_ft_putstr("  /\\"); */
+	/* 	corr_ft_putstr("\n "); */
 	/* } */
 	/* if (level == 2) */
 	/* { */
-	/* 	ft_putstr("/\\  /\\"); */
-	/* 	ft_putstr("\n"); */
+	/* 	corr_ft_putstr("/\\  /\\"); */
+	/* 	corr_ft_putstr("\n"); */
 	/* } */
 }
 
