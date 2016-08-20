@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 16:05:29 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/19 14:04:10 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/20 11:11:39 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-int		ft_strlen(char *str)
+int		corr_ft_strlen(char *str)
 {
 	int i;
 
@@ -34,7 +34,7 @@ int		ft_strlen(char *str)
 
 void	ft_putstr(void *str)
 {
-	write(1, (char *)str, ft_strlen((char *)str));
+	write(1, (char *)str, corr_ft_strlen((char *)str));
 }
 
 void	ft_put1char(void *str)
