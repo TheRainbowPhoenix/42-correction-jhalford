@@ -6,7 +6,7 @@
 /*   By: jhalford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 15:56:47 by jhalford          #+#    #+#             */
-/*   Updated: 2016/08/20 15:12:34 by jhalford         ###   ########.fr       */
+/*   Updated: 2016/08/24 11:54:53 by jhalford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int		main(void)
 	base = ft_create_elem("ABC");
 	base->next = ft_create_elem("012");
 	base->next->next = ft_create_elem("xyz");
-	start_day(13);
+	start_day(11);
 #ifdef ex00
 	exname = "ft_create_elem";
 	start_exo(exnb);
